@@ -1,0 +1,131 @@
+@use "sass:math";
+// Подключаемые шрифты
+// @import "fonts/fonts";
+
+// Функции и переменные
+@import 'base/variables';
+@import 'base/functions';
+
+:root {
+	// Шрифт по умолчанию
+	--fontFamily: "Georgia";
+
+	--fontFamilyArial: "Arial";
+	// font-weight. prefix: --fw-
+	--fw-200: 200;
+	--fw-300: 300;
+	--fw-400: 400;
+	--fw-500: 500;
+	--fw-600: 600;
+	--fw-700: 700;
+
+	// colors. prefix: --color-
+	--color-light-xl: #FFFFFF;
+	--color-light-l: #F6F6F6;
+	--color-light-s: #FAFAFA;
+
+	--color-dark-s: #CDCDCD;
+	--color-dark-m: #B2B2B2;
+	--color-dark-l: #545454;
+	--color-dark-xl: #4C4C4C;
+	--color-dark-2xl: #444444;
+	--color-dark-3xl: #292929;
+
+	--color-primary: #F1CDB3;
+	--color-primary-light: #FDDCC4;
+
+
+	// line-height. prefix: --lh-
+	
+	// letter-spacing. prefix: --ls-
+
+	// font-size. prefix: --fz-
+}
+
+$containerWidth: 1200;
+
+$containerPaddingDefault: 80;
+$containerSidePaddingDefault: math.div($containerPaddingDefault, 2);
+
+$containerPaddingL: 60;
+$containerSidePaddingXS: math.div($containerPaddingL, 2);
+
+$containerPaddingM: 20;
+$containerSidePaddingM: math.div($containerPaddingM, 2);
+
+// Обнуление, общие параметры
+@import 'base/reset';
+// @import 'base/mixins';
+
+// Оболочка
+html {
+	background-color: #444444;
+	font-size: $defaultFZ + px;
+}
+// Если требуется полностью резиновая вёрстка на любых типах экранов. Все основные значения в rem
+// Для однопиксельных значений: max(1px, 1rem)
+// html {
+// 	font-size: math.div(100vw, 1440) * 10; 
+// 	@media (max-width: em($breakpoint992)) {
+// 		font-size: math.div(100vw, $breakpoint768) * 10; 
+// 	}
+// 	@media (max-width: em($breakpoint768)) {
+// 		font-size: math.div(100vw, $breakpoint576) * 10; 
+// 	}
+// 	@media (max-width: em($breakpoint576)) {
+// 		font-size: math.div(100vw, $breakpoint360) * 10; 
+// 	}
+// }
+
+body {
+	&.lock {
+		overflow: hidden;
+	}
+}
+
+.wrapper {
+	width: 100%;
+	min-height: 100%;
+	overflow: hidden;
+	display: flex;
+	flex-direction: column;
+}
+
+// Основная сетка
+.container {
+	max-width: ($containerWidth + $containerPaddingDefault) + px;
+	width: 100%;
+	margin: 0 auto;
+	padding: 0 ($containerSidePaddingDefault + px);
+}
+
+.vertical-indent {
+	&_xs {
+		padding-top: 0px;
+		padding-bottom: 0px;
+	}
+	&_s {
+		padding-top: 0px;
+		padding-bottom: 0px;
+	}
+	&_m {
+		padding-top: 0px;
+		padding-bottom: 0px;
+	}
+	&_l {
+		padding-top: 0px;
+		padding-bottom: 0px;
+	}
+	&_xl {
+		padding-top: 0px;
+		padding-bottom: 0px;
+
+	}
+}
+
+// классы для вставки 
+// vertical-indent vertical-indent_xs
+// vertical-indent vertical-indent_s
+// vertical-indent vertical-indent_m
+// vertical-indent vertical-indent_l
+// vertical-indent vertical-indent_xl
