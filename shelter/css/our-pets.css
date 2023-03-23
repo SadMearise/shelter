@@ -1,3 +1,34 @@
+.footer {
+  background: url("/shelter/img/footer/bg.jpg") 0 0/100% 100% no-repeat;
+}
+.footer__row {
+  display: flex;
+  justify-content: space-between;
+}
+.footer__col {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  flex: 0 0 303px;
+}
+.footer__col:nth-child(2) {
+  margin-left: -20px;
+}
+.footer__col:last-child {
+  margin-top: auto;
+}
+.footer__col:not(:last-child) {
+  padding: 16px 0 60px;
+}
+.footer__link-container {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+.footer *:last-child {
+  margin-bottom: 0;
+}
+
 .header {
   position: absolute;
   top: 0;

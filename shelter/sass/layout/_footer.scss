@@ -1,2 +1,52 @@
 @import '../base/variables';
 @import '../base/functions';
+
+.footer {
+	background: url('/shelter/img/footer/bg.jpg') 0 0/100% 100% no-repeat;
+	
+	&__container {
+	}
+
+	&__row {
+		display: flex;
+		justify-content: space-between;
+	}
+
+	&__col {
+		display: flex;
+		flex-direction: column;
+		justify-content: space-between;
+		flex: 0 0 303px;
+		&:nth-child(2) {
+			margin-left: -20px;
+		}
+		&:last-child {
+			margin-top: auto;
+		}
+		&:not(:last-child) {
+			padding: 16px 0 60px;
+		}
+	}
+
+	&__title {
+	}
+
+	&__link-container {
+		display: flex;
+		align-items: center;
+		gap: 20px;
+	}
+
+	&__icon {
+	}
+
+	&__link {
+	}
+
+	&__image {
+	}
+
+	*:last-child {
+		margin-bottom: 0;
+	}
+}

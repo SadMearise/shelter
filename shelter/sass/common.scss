@@ -52,4 +52,19 @@
 		margin-right: auto;
 		text-align: center;
 	}
+	&_light {
+		color: #FFFFFF;
+	}
+}
+
+.h4-title {
+	font-weight: 400;
+	font-size: 20px;
+	line-height: 115%;
+	letter-spacing: 0.06em;
+	color: #545454;
+
+	&_primary {
+		color: #F1CDB3
+	}
 }
