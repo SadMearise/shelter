@@ -43,8 +43,11 @@
 .header-nav-menu__item + .header-nav-menu__item {
   margin-left: 35px;
 }
-.header-nav-menu__item:nth-child(1), .header-nav-menu__item:hover {
+.header-nav-menu__item:nth-child(1), .header-nav-menu__item:active {
   border-bottom: 3px solid #F1CDB3;
+}
+.header-nav-menu__item:hover:not(:first-child) .header-nav-menu__item-link {
+  color: #FAFAFA;
 }
 .header-nav-menu__item-link {
   font-family: var(--fontFamilyArial);
@@ -52,6 +55,7 @@
   font-size: 15px;
   line-height: 160%;
   color: #CDCDCD;
+  transition: all 0.3s ease 0s;
 }
 
 .main-screen {

@@ -60,10 +60,14 @@
 			margin-left: 35px;
 		}
 		&:nth-child(1),
-		&:hover {
+		&:active {
 			border-bottom: 3px solid #F1CDB3;
 		}
-
+		&:hover:not(:first-child) {
+			.header-nav-menu__item-link {
+				color: #FAFAFA;
+			}
+		}
 	}
 
 	&__item-link {
@@ -72,5 +76,6 @@
 		font-size: 15px;
 		line-height: 160%;
 		color: #CDCDCD;
+		transition: all .3s ease 0s;
 	}
 }
