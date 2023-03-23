@@ -2,3 +2,61 @@
 @import '../base/functions';
 @import '../layout/footer';
 @import '../layout/header';
+
+
+.main-screen {
+	background: url('/shelter/img/noise_transparent@2x.png'), radial-gradient(100% 215.42% at 0% 0%, #5B483A 0%, #262425 100%), #211F20;
+	
+	
+	&__container {
+		display: flex;
+		flex-direction: column;
+		min-height: 908px;
+	}
+
+	&__content {
+		flex: 1 0 100%;
+		display: flex;
+		justify-content: space-between;
+		align-items: end;
+	}
+
+	&__info-block {
+		margin-bottom: 243px;
+	}
+
+	&__image {
+		display: inline-block;
+		width: 58.167%;
+		height: auto;
+	}
+}
+
+.info-block {
+	max-width: 460px;
+	&__title {
+		max-width: 310px;
+		font-weight: 400;
+		font-size: 44px;
+		line-height: 130%;
+		color: #FFFFFF;
+		margin-bottom: 42px;
+	}
+
+	&__text {
+		font-family: var(--fontFamilyArial);
+		font-weight: 400;
+		font-size: 15px;
+		line-height: 160%;
+		color: #CDCDCD;
+		margin-bottom: 42px;
+	}
+
+	&__button {
+		
+	}
+
+	*:last-child {
+		margin-bottom: 0;
+	}
+}

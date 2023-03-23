@@ -1,0 +1,30 @@
+.btn {
+	display: inline-block;
+	text-align: center;
+	vertical-align: middle;
+	padding: 14px 44px;
+	background-color: transparent;
+	color: transparent;
+	border: 1p solid transparent;
+	border-radius: 100px;
+	white-space: nowrap;
+	text-decoration: none;
+	transition: 0.3s;
+	cursor: pointer;
+	user-select: none;
+	transition: all .3s ease 0s;
+
+	&_default {
+		font-weight: 400;
+		font-size: 17px;
+		line-height: 130%;
+		letter-spacing: 0.06em;
+		color: #292929;
+		background-color: #F1CDB3;
+		border: 1px solid #F1CDB3;
+		&:hover {
+			background-color: #FDDCC4;
+			border: 1px solid #FDDCC4;
+		}
+	}
+}

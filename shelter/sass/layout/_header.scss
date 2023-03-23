@@ -2,8 +2,12 @@
 @import '../base/functions';
 
 .header {
+	position: absolute;
+	top: 0;
+	left: 0;
 	width: 100%;
 	margin-top: 30px;
+	z-index: 100;
 	&__container {
 	}
 
@@ -51,6 +55,7 @@
 
 	&__item {
 		border-bottom: 3px solid transparent;
+		transition: all .3s ease 0s;
 		& + & {
 			margin-left: 35px;
 		}
