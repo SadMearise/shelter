@@ -3,7 +3,7 @@
 @import '../layout/footer';
 @import '../layout/header';
 
-
+// main-screen
 .main-screen {
 	background: url('/shelter/img/noise_transparent@2x.png'), radial-gradient(100% 215.42% at 0% 0%, #5B483A 0%, #262425 100%), #211F20;
 	
@@ -60,3 +60,45 @@
 		margin-bottom: 0;
 	}
 }
+// /main-screen
+
+
+// section about-the-shelter
+.about-the-shelter {
+	background-color: #FFFFFF;
+	&__container {
+	}
+
+	&__row {
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		gap: 10%;
+	}
+
+	&__col {
+	}
+
+	&__image {
+	}
+
+	&__title {
+		margin-bottom: 25px;
+		max-width: 370px;
+	}
+
+	&__text {
+		font-family: var(--fontFamilyArial);
+		font-weight: 400;
+		font-size: 15px;
+		line-height: 160%;
+		color: #4C4C4C;
+		margin-bottom: 25px;
+		max-width: 430px;
+	}
+
+	*:last-child {
+		margin-bottom: 0;
+	}
+}
+// /section about-the-shelter

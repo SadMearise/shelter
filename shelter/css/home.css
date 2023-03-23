@@ -103,3 +103,29 @@
 .info-block *:last-child {
   margin-bottom: 0;
 }
+
+.about-the-shelter {
+  background-color: #FFFFFF;
+}
+.about-the-shelter__row {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10%;
+}
+.about-the-shelter__title {
+  margin-bottom: 25px;
+  max-width: 370px;
+}
+.about-the-shelter__text {
+  font-family: var(--fontFamilyArial);
+  font-weight: 400;
+  font-size: 15px;
+  line-height: 160%;
+  color: #4C4C4C;
+  margin-bottom: 25px;
+  max-width: 430px;
+}
+.about-the-shelter *:last-child {
+  margin-bottom: 0;
+}
