@@ -119,7 +119,7 @@ q:before, q:after {
 
 /*--------------------*/
 html {
-  background-color: #444444;
+  scroll-behavior: smooth;
   font-size: 10px;
 }
 

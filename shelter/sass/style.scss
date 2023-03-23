@@ -59,7 +59,7 @@ $containerSidePaddingM: math.div($containerPaddingM, 2);
 
 // Оболочка
 html {
-	background-color: #444444;
+	scroll-behavior: smooth;
 	font-size: $defaultFZ + px;
 }
 // Если требуется полностью резиновая вёрстка на любых типах экранов. Все основные значения в rem
