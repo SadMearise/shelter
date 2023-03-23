@@ -5,7 +5,7 @@
 	padding: 14px 44px;
 	background-color: transparent;
 	color: transparent;
-	border: 1p solid transparent;
+	border: 1px solid transparent;
 	border-radius: 100px;
 	white-space: nowrap;
 	text-decoration: none;
@@ -26,6 +26,18 @@
 			background-color: #FDDCC4;
 			border: 1px solid #FDDCC4;
 		}
+	}
+
+	&_donation {
+		font-weight: 400;
+		font-size: 20px;
+		line-height: 115%;
+		letter-spacing: 0.06em;
+		color: #545454;
+		background-color: #F1CDB3;
+		padding: 10px 15px 10px 60px;
+		border-radius: 9px;
+		border: 0;
 	}
 }
 

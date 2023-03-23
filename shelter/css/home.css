@@ -167,3 +167,54 @@
   letter-spacing: 0.06em;
   color: #545454;
 }
+
+.donation {
+  background-color: #F6F6F6;
+}
+.donation__row {
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+  align-items: center;
+}
+.donation__col {
+  display: flex;
+  flex-direction: column;
+}
+.donation__col:last-child {
+  flex: 0 1 380px;
+}
+.donation__section-title {
+  margin-bottom: 20px;
+  max-width: 300px;
+}
+.donation__subtitle {
+  font-weight: 400;
+  font-size: 15px;
+  line-height: 110%;
+  letter-spacing: 0.06em;
+  color: #545454;
+  margin-bottom: 20px;
+}
+.donation__button {
+  position: relative;
+  margin-bottom: 20px;
+  width: -moz-fit-content;
+  width: fit-content;
+}
+.donation__button::before {
+  content: url("/shelter/img/donation/credit-card.svg");
+  position: absolute;
+  left: 15px;
+}
+.donation__text {
+  font-family: var(--fontFamilyArial);
+  font-style: italic;
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 18px;
+  color: #B2B2B2;
+}
+.donation *:last-child {
+  margin-bottom: 0;
+}
