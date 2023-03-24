@@ -57,6 +57,10 @@ $containerSidePaddingM: math.div($containerPaddingM, 2);
 // Обнуление, общие параметры
 @import 'base/reset';
 
+::-webkit-scrollbar {
+	width: 0;
+}
+
 // Оболочка
 html {
 	scroll-behavior: smooth;

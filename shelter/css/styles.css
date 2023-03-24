@@ -120,6 +120,10 @@ q:before, q:after {
 }
 
 /*--------------------*/
+::-webkit-scrollbar {
+  width: 0;
+}
+
 html {
   scroll-behavior: smooth;
   font-size: 10px;
