@@ -1,8 +1,7 @@
 @import '../base/variables';
 @import '../base/functions';
-@import '../layout/footer';
 @import '../layout/header';
-
+@import '../layout/footer';
 
 .pagination {
 	font-size: 0;
@@ -11,5 +10,9 @@
 	gap: 20px;
 	
 	&__item {
+	}
+
+	&_btn {
+		
 	}
 }

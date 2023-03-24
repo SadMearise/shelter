@@ -1,6 +1,88 @@
+.header {
+  padding: 30px 0;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 100;
+}
+.header_light {
+  position: static;
+  background-color: var(--color-light-xl);
+}
+.header__row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.header__title-logo-link {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  align-items: end;
+  font-weight: var(--fw-400);
+  font-size: var(--fz-32);
+  line-height: 110%;
+  letter-spacing: 0.06em;
+  color: var(--color-primary);
+}
+.header__title-logo-link span {
+  font-family: var(--fontFamilyArial);
+  font-weight: var(--fw-400);
+  font-size: var(--fz-13);
+  line-height: 15px;
+  letter-spacing: 0.1em;
+  color: var(--color-light-xl);
+}
+.header__title-logo-link_dark {
+  color: var(--color-dark-l);
+}
+.header__title-logo-link_dark span {
+  color: var(--color-dark-3xl);
+}
+.header-nav-menu_dark .header-nav-menu__item-link {
+  color: var(--color-dark-l);
+}
+.header-nav-menu_dark .header-nav-menu__item:hover .header-nav-menu__item-link {
+  color: var(--color-dark-3xl) !important;
+}
+.header-nav-menu__list {
+  display: flex;
+  align-items: center;
+}
+.header-nav-menu__list .active {
+  border-bottom: 3px solid var(--color-primary);
+}
+.header-nav-menu__list .active .header-nav-menu__item-link {
+  color: var(--color-light-s);
+}
+.header-nav-menu__list .active_dark .header-nav-menu__item-link {
+  color: var(--color-dark-3xl);
+}
+.header-nav-menu__item {
+  border-bottom: 3px solid transparent;
+  transition: all 0.3s ease 0s;
+}
+.header-nav-menu__item + .header-nav-menu__item {
+  margin-left: 35px;
+}
+.header-nav-menu__item:active {
+  border-bottom: 3px solid var(--color-primary);
+}
+.header-nav-menu__item:hover:not(:first-child) .header-nav-menu__item-link {
+  color: var(--color-light-s);
+}
+.header-nav-menu__item-link {
+  font-family: var(--fontFamilyArial);
+  font-weight: var(--fw-400);
+  font-size: var(--fz-15);
+  line-height: 160%;
+  color: var(--color-dark-s);
+  transition: all 0.3s ease 0s;
+}
+
 .footer {
   background: url("/shelter/img/footer/bg.jpg") 0 0/100% 100% no-repeat;
-  margin-top: auto;
 }
 .footer__row {
   display: flex;
@@ -41,91 +123,6 @@
   margin-bottom: 0;
 }
 
-.header {
-  padding: 30px 0;
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  z-index: 100;
-}
-.header_light {
-  position: static;
-  background-color: #FFFFFF;
-}
-.header__row {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-}
-.header__logo-block {
-  display: flex;
-  flex-direction: column;
-  gap: 10px;
-  align-items: end;
-}
-.header__title-logo-link {
-  font-weight: 400;
-  font-size: 32px;
-  line-height: 110%;
-  letter-spacing: 0.06em;
-  color: #F1CDB3;
-}
-.header__title-logo-link_dark {
-  color: #545454;
-}
-.header__subtitle {
-  font-family: var(--fontFamilyArial);
-  font-weight: 400;
-  font-size: 13px;
-  line-height: 15px;
-  letter-spacing: 0.1em;
-  color: #FFFFFF;
-}
-.header__subtitle_dark {
-  color: #292929;
-}
-.header-nav-menu_dark .header-nav-menu__item-link {
-  color: #545454;
-}
-.header-nav-menu_dark .header-nav-menu__item:hover .header-nav-menu__item-link {
-  color: #292929 !important;
-}
-.header-nav-menu__list {
-  display: flex;
-  align-items: center;
-}
-.header-nav-menu__list .active {
-  border-bottom: 3px solid #F1CDB3;
-}
-.header-nav-menu__list .active .header-nav-menu__item-link {
-  color: #FAFAFA;
-}
-.header-nav-menu__list .active_dark .header-nav-menu__item-link {
-  color: #292929;
-}
-.header-nav-menu__item {
-  border-bottom: 3px solid transparent;
-  transition: all 0.3s ease 0s;
-}
-.header-nav-menu__item + .header-nav-menu__item {
-  margin-left: 35px;
-}
-.header-nav-menu__item:active:not(:first-child) {
-  border-bottom: 3px solid #F1CDB3;
-}
-.header-nav-menu__item:hover:not(:first-child) .header-nav-menu__item-link {
-  color: #FAFAFA;
-}
-.header-nav-menu__item-link {
-  font-family: var(--fontFamilyArial);
-  font-weight: 400;
-  font-size: 15px;
-  line-height: 160%;
-  color: #CDCDCD;
-  transition: all 0.3s ease 0s;
-}
-
 .main-screen {
   background: url("/shelter/img/main-screen/bg.jpg") 0 0/100% 100% no-repeat;
 }
@@ -154,18 +151,18 @@
 }
 .info-block__title {
   max-width: 310px;
-  font-weight: 400;
+  font-weight: var(--fw-400);
   font-size: 44px;
   line-height: 130%;
-  color: #FFFFFF;
+  color: var(--color-light-xl);
   margin-bottom: 42px;
 }
 .info-block__text {
   font-family: var(--fontFamilyArial);
-  font-weight: 400;
-  font-size: 15px;
+  font-weight: var(--fw-400);
+  font-size: var(--fz-15);
   line-height: 160%;
-  color: #CDCDCD;
+  color: var(--color-dark-s);
   margin-bottom: 42px;
 }
 .info-block *:last-child {
@@ -173,7 +170,7 @@
 }
 
 .about-the-shelter {
-  background-color: #FFFFFF;
+  background-color: var(--color-light-xl);
 }
 .about-the-shelter__row {
   display: flex;
@@ -187,10 +184,10 @@
 }
 .about-the-shelter__text {
   font-family: var(--fontFamilyArial);
-  font-weight: 400;
-  font-size: 15px;
+  font-weight: var(--fw-400);
+  font-size: var(--fz-15);
   line-height: 160%;
-  color: #4C4C4C;
+  color: var(--color-dark-xl);
   margin-bottom: 25px;
   max-width: 430px;
 }
@@ -222,7 +219,7 @@
   right: 0;
 }
 .help {
-  background-color: #FFFFFF;
+  background-color: var(--color-light-xl);
 }
 .help__section-title {
   max-width: 310px;
@@ -245,7 +242,7 @@
   margin-bottom: 30px;
 }
 .donation {
-  background-color: #F6F6F6;
+  background-color: var(--color-light-l);
 }
 .donation__row {
   display: flex;
@@ -265,11 +262,11 @@
   max-width: 300px;
 }
 .donation__subtitle {
-  font-weight: 400;
-  font-size: 15px;
+  font-weight: var(--fw-400);
+  font-size: var(--fz-15);
   line-height: 110%;
   letter-spacing: 0.06em;
-  color: #545454;
+  color: var(--color-dark-l);
   margin-bottom: 20px;
 }
 .donation__button {
@@ -286,10 +283,10 @@
 .donation__text {
   font-family: var(--fontFamilyArial);
   font-style: italic;
-  font-weight: 400;
-  font-size: 12px;
+  font-weight: var(--fw-400);
+  font-size: var(--fz-12);
   line-height: 18px;
-  color: #B2B2B2;
+  color: var(--color-dark-m);
 }
 .donation *:last-child {
   margin-bottom: 0;

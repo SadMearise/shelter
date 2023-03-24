@@ -1,6 +1,4 @@
 @use "sass:math";
-// Подключаемые шрифты
-// @import "fonts/fonts";
 
 // Функции и переменные
 @import 'base/variables';
@@ -11,13 +9,9 @@
 	--fontFamily: "Georgia";
 
 	--fontFamilyArial: "Arial";
+
 	// font-weight. prefix: --fw-
-	--fw-200: 200;
-	--fw-300: 300;
 	--fw-400: 400;
-	--fw-500: 500;
-	--fw-600: 600;
-	--fw-700: 700;
 
 	// colors. prefix: --color-
 	--color-light-xl: #FFFFFF;
@@ -40,6 +34,13 @@
 	// letter-spacing. prefix: --ls-
 
 	// font-size. prefix: --fz-
+	--fz-12: 12px;
+	--fz-13: 13px;
+	--fz-15: 15px;
+	--fz-17: 17px;
+	--fz-20: 20px;
+	--fz-32: 32px;
+	--fz-35: 35px;
 }
 
 $containerWidth: 1200;
@@ -55,30 +56,14 @@ $containerSidePaddingM: math.div($containerPaddingM, 2);
 
 // Обнуление, общие параметры
 @import 'base/reset';
-// @import 'base/mixins';
 
 // Оболочка
 html {
 	scroll-behavior: smooth;
 	font-size: $defaultFZ + px;
 }
-// Если требуется полностью резиновая вёрстка на любых типах экранов. Все основные значения в rem
-// Для однопиксельных значений: max(1px, 1rem)
-// html {
-// 	font-size: math.div(100vw, 1440) * 10; 
-// 	@media (max-width: em($breakpoint992)) {
-// 		font-size: math.div(100vw, $breakpoint768) * 10; 
-// 	}
-// 	@media (max-width: em($breakpoint768)) {
-// 		font-size: math.div(100vw, $breakpoint576) * 10; 
-// 	}
-// 	@media (max-width: em($breakpoint576)) {
-// 		font-size: math.div(100vw, $breakpoint360) * 10; 
-// 	}
-// }
 
 body {
-	background-color: cadetblue;
 	&.lock {
 		overflow: hidden;
 	}
@@ -101,10 +86,6 @@ body {
 }
 
 .vertical-indent {
-	&_xs {
-		padding-top: 0px;
-		padding-bottom: 0px;
-	}
 	&_s {
 		padding-top: 40px;
 		padding-bottom: 0px;
@@ -113,20 +94,4 @@ body {
 		padding-top: 80px;
 		padding-bottom: 100px;
 	}
-	&_l {
-		padding-top: 0px;
-		padding-bottom: 0px;
-	}
-	&_xl {
-		padding-top: 0px;
-		padding-bottom: 0px;
-
-	}
 }
-
-// классы для вставки 
-// vertical-indent vertical-indent_xs
-// vertical-indent vertical-indent_s
-// vertical-indent vertical-indent_m
-// vertical-indent vertical-indent_l
-// vertical-indent vertical-indent_xl

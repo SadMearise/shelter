@@ -2,12 +2,7 @@
 :root {
   --fontFamily: "Georgia";
   --fontFamilyArial: "Arial";
-  --fw-200: 200;
-  --fw-300: 300;
   --fw-400: 400;
-  --fw-500: 500;
-  --fw-600: 600;
-  --fw-700: 700;
   --color-light-xl: #FFFFFF;
   --color-light-l: #F6F6F6;
   --color-light-s: #FAFAFA;
@@ -19,6 +14,13 @@
   --color-dark-3xl: #292929;
   --color-primary: #F1CDB3;
   --color-primary-light: #FDDCC4;
+  --fz-12: 12px;
+  --fz-13: 13px;
+  --fz-15: 15px;
+  --fz-17: 17px;
+  --fz-20: 20px;
+  --fz-32: 32px;
+  --fz-35: 35px;
 }
 
 /*Обнуление*/
@@ -94,7 +96,7 @@ img {
 
 h1, h2, h3, h4, h5, h6 {
   font-size: inherit;
-  font-weight: 400;
+  font-weight: var(--fw-400);
 }
 
 table {
@@ -123,9 +125,6 @@ html {
   font-size: 10px;
 }
 
-body {
-  background-color: cadetblue;
-}
 body.lock {
   overflow: hidden;
 }
@@ -145,10 +144,6 @@ body.lock {
   padding: 0 40px;
 }
 
-.vertical-indent_xs {
-  padding-top: 0px;
-  padding-bottom: 0px;
-}
 .vertical-indent_s {
   padding-top: 40px;
   padding-bottom: 0px;
@@ -156,12 +151,4 @@ body.lock {
 .vertical-indent_m {
   padding-top: 80px;
   padding-bottom: 100px;
-}
-.vertical-indent_l {
-  padding-top: 0px;
-  padding-bottom: 0px;
-}
-.vertical-indent_xl {
-  padding-top: 0px;
-  padding-bottom: 0px;
 }

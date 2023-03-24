@@ -10,7 +10,7 @@
 	z-index: 100;
 	&_light {
 		position: static;
-		background-color: #FFFFFF;
+		background-color: var(--color-light-xl);
 	}
 
 	&__container {
@@ -20,40 +20,35 @@
 		display: flex;
 		justify-content: space-between;
 		align-items: center;
-		
 	}
 
-	&__logo-block {
+	&__title-logo {
+	}
+
+	&__title-logo-link {
 		display: flex;
 		flex-direction: column;
 		gap: 10px;
 		align-items: end;
-	}
 
-	&__title-logo {
-		
-	}
-
-	&__title-logo-link {
-		font-weight: 400;
-		font-size: 32px;
+		font-weight: var(--fw-400);
+		font-size: var(--fz-32);
 		line-height: 110%;
 		letter-spacing: 0.06em;
-		color: #F1CDB3;
-		&_dark {
-			color: #545454;
+		color: var(--color-primary);
+		span {
+			font-family: var(--fontFamilyArial);
+			font-weight: var(--fw-400);
+			font-size: var(--fz-13);
+			line-height: 15px;
+			letter-spacing: 0.1em;
+			color: var(--color-light-xl);
 		}
-	}
-
-	&__subtitle {
-		font-family: var(--fontFamilyArial);
-		font-weight: 400;
-		font-size: 13px;
-		line-height: 15px;
-		letter-spacing: 0.1em;
-		color: #FFFFFF;
 		&_dark {
-			color: #292929;
+			color: var(--color-dark-l);
+			span {
+				color: var(--color-dark-3xl);
+			}
 		}
 	}
 
@@ -65,11 +60,11 @@
 
 	&_dark {
 		.header-nav-menu__item-link {
-			color: #545454;
+			color: var(--color-dark-l);
 		}
 		.header-nav-menu__item:hover {
 			.header-nav-menu__item-link {
-				color: #292929 !important;
+				color: var(--color-dark-3xl) !important;
 			}
 		}
 	}
@@ -79,14 +74,14 @@
 		align-items: center;
 
 		.active {
-			border-bottom: 3px solid #F1CDB3;
+			border-bottom: 3px solid var(--color-primary);
 			
 			.header-nav-menu__item-link {
-				color: #FAFAFA;
+				color: var(--color-light-s);
 			}
 			&_dark {
 				.header-nav-menu__item-link {
-					color: #292929;
+					color: var(--color-dark-3xl);
 				}
 			}
 		}
@@ -98,22 +93,22 @@
 		& + & {
 			margin-left: 35px;
 		}
-		&:active:not(:first-child) {
-			border-bottom: 3px solid #F1CDB3;
+		&:active {
+			border-bottom: 3px solid var(--color-primary);
 		}
 		&:hover:not(:first-child) {
 			.header-nav-menu__item-link {
-				color: #FAFAFA;
+				color: var(--color-light-s);
 			}
 		}
 	}
 	
 	&__item-link {
 		font-family: var(--fontFamilyArial);
-		font-weight: 400;
-		font-size: 15px;
+		font-weight: var(--fw-400);
+		font-size: var(--fz-15);
 		line-height: 160%;
-		color: #CDCDCD;
+		color: var(--color-dark-s);
 		transition: all .3s ease 0s;	
 	}
 }

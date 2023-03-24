@@ -4,7 +4,7 @@
 	vertical-align: middle;
 	padding: 14px 44px;
 	background-color: transparent;
-	color: #292929;
+	color: var(--color-dark-3xl);
 	border: 1px solid transparent;
 	border-radius: 100px;
 	white-space: nowrap;
@@ -13,36 +13,36 @@
 	user-select: none;
 	transition: all .3s ease 0s;
 	letter-spacing: 0.06em;
-	font-weight: 400;
+	font-weight: var(--fw-400);
 	line-height: 130%;
-	font-size: 17px;
+	font-size: var(--fz-17);
 
 	&_default {
-		background-color: #F1CDB3;
-		border: 1px solid #F1CDB3;
+		background-color: var(--color-primary);
+		border: 1px solid var(--color-primary);
 	}
 
 	&_donation {
-		font-size: 20px;
+		font-size: var(--fz-20);
 		line-height: 115%;
-		color: #545454;
+		color: var(--color-dark-l);
 		padding: 10px 15px 10px 60px;
-		background-color: #F1CDB3;
+		background-color: var(--color-primary);
 		border: 0;
 		border-radius: 9px;
 	}
 
 	&_light {
 		padding: 13px 43px;
-		background-color: #FAFAFA;
-		border: 2px solid #F1CDB3;
+		background-color: var(--color-light-s);
+		border: 2px solid var(--color-primary);
 	}
 
 	&_default:hover, 
 	&_donation:hover, 
 	&_light:hover {
-		background-color: #FDDCC4;
-		border-color: #FDDCC4;
+		background-color: var(--color-primary-light);
+		border-color: var(--color-primary-light);
 	} 
 }
 
@@ -54,21 +54,21 @@
 	text-align: center;
 	vertical-align: middle;
 	background-color: transparent;
-	border: 2px solid #F1CDB3;
+	border: 2px solid var(--color-primary);
 	border-radius: 100%;
-	font-weight: 400;
-	font-size: 20px;
+	font-weight: var(--fw-400);
+	font-size: var(--fz-20);
 	line-height: 115%;
 	letter-spacing: 0.06em;
-	color: #292929;
+	color: var(--color-dark-3xl);
 	text-decoration: none;
 	cursor: pointer;
 	user-select: none;
 	transition: all .3s ease 0s;
 	
 	&:not([disabled]):hover {
-		background-color: #FDDCC4;
-		border-color: #FDDCC4;
+		background-color: var(--color-primary-light);
+		border-color: var(--color-primary-light);
 	}
 	svg,
 	span {
@@ -78,7 +78,7 @@
 	}
 
 	&_page {
-		background-color: #F1CDB3;
+		background-color: var(--color-primary);
 	}
 
 	&_prev,
@@ -99,46 +99,46 @@
 		}
 	}
 
-	&_incative-nav {
-		border-color: #CDCDCD;
+	&_inactive-nav {
+		border-color: var(--color-dark-s);
 		svg {
 			path {
-				fill: #CDCDCD;
+				fill: var(--color-dark-s);
 			}
 		}
 	}
 }
 
 .h3-title {
-	font-weight: 400;
-	font-size: 35px;
+	font-weight: var(--fw-400);
+	font-size: var(--fz-35);
 	line-height: 130%;
 	letter-spacing: 0.06em;
-	color: #545454;
+	color: var(--color-dark-l);
 	&_center {
 		margin-left: auto;
 		margin-right: auto;
 		text-align: center;
 	}
 	&_light {
-		color: #FFFFFF;
+		color: var(--color-light-xl);
 	}
 }
 
 .h4-title {
-	font-weight: 400;
-	font-size: 20px;
+	font-weight: var(--fw-400);
+	font-size: var(--fz-20);
 	line-height: 115%;
 	letter-spacing: 0.06em;
-	color: #545454;
+	color: var(--color-dark-l);
 
 	&_primary {
-		color: #F1CDB3
+		color: var(--color-primary)
 	}
 }
 
 .our-friends {
-	background-color: #F6F6F6;
+	background-color: var(--color-light-l);
 	&__container {
 	}
 
@@ -181,11 +181,14 @@
 .pet-card {
 	
 	&__content {
+		cursor: pointer;
 		border-radius: 9px;
-		background-color: #FAFAFA;
-		transition: box-shadow .3s ease 0s;
+		background-color: var(--color-light-s);
+		transition: all .3s ease 0s;
+		will-change: transform;
 		&:hover {
 			box-shadow: 0px 16px 31px -5px rgba(84, 84, 84, 0.68);
+			transform: translate(3%, -3%);
 		}
 	}
 
@@ -211,14 +214,15 @@
 		width: 100%;
 		height: 100%;
 		object-fit: contain;
+		border-radius: 9px;
 	}
 
 	&__title {
-		font-weight: 400;
-		font-size: 20px;
+		font-weight: var(--fw-400);
+		font-size: var(--fz-20);
 		line-height: 23px;
 		letter-spacing: 0.06em;
-		color: #545454;
+		color: var(--color-dark-l);
 	}
 
 	&__button {
