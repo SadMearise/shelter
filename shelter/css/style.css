@@ -123,6 +123,9 @@ html {
   font-size: 10px;
 }
 
+body {
+  background-color: cadetblue;
+}
 body.lock {
   overflow: hidden;
 }

@@ -6,7 +6,6 @@
 // main-screen
 .main-screen {
 	background: url('/shelter/img/main-screen/bg.jpg') 0 0/100% 100% no-repeat;
-	
 	&__container {
 		display: flex;
 		flex-direction: column;
@@ -105,11 +104,35 @@
 
 
 // section our friends
-.our-friends {
-	background-color: #F6F6F6;
+.friends-slider {
+	position: relative;
+	&__wrapper {
+		display: flex;
+		margin: 0 -3.75%;
+		padding: 0 8.75%;
+	}
 
-	&__section-title {
-		margin-bottom: 60px;
+	&__slide {
+		flex: 0 1 33.3333%;
+		padding: 0 4.167%;
+	}
+
+	&__button-wrapper {
+		position: absolute;
+		top: 50%;
+		transform: translateY(-50%);
+		&_prev {
+			left: 0;
+		}
+		&_next {
+			right: 0;
+		}
+	}
+
+	&__button-prev {
+	}
+
+	&__button-next {
 	}
 }
 // /section our friends

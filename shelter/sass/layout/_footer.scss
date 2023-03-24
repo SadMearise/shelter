@@ -3,7 +3,7 @@
 
 .footer {
 	background: url('/shelter/img/footer/bg.jpg') 0 0/100% 100% no-repeat;
-	
+	margin-top: auto;
 	&__container {
 	}
 
@@ -41,6 +41,11 @@
 	}
 
 	&__link {
+		will-change: transform;
+		transition: transform .3s ease-out 0s;
+		&:hover {
+			transform: scale(1.04);
+		}
 	}
 
 	&__image {
