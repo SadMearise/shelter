@@ -74,6 +74,9 @@
   top: 50%;
   left: 50%;
 }
+.nav-btn_page {
+  background-color: #F1CDB3;
+}
 .nav-btn_prev svg,
 .nav-btn_prev span, .nav-btn_page svg,
 .nav-btn_page span, .nav-btn_next-nav svg,
