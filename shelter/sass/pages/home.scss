@@ -5,7 +5,7 @@
 
 // main-screen
 .main-screen {
-	background: url('/shelter/img/main-screen/bg.jpg') 0 0/100% 100% no-repeat;
+	background: url('../../shelter/img/main-screen/bg.jpg') 0 0/100% 100% no-repeat;
 	&__container {
 		display: flex;
 		flex-direction: column;
@@ -220,7 +220,7 @@
 		margin-bottom: 20px;
 		width: fit-content;
 		&::before {
-			content: url('/shelter/img/donation/credit-card.svg');
+			content: url('../../shelter/img/donation/credit-card.svg');
 			position: absolute;
 			left: 15px;
 		}

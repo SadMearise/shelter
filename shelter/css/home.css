@@ -82,7 +82,7 @@
 }
 
 .footer {
-  background: url("/shelter/img/footer/bg.jpg") 0 0/100% 100% no-repeat;
+  background: url("../../shelter/img/footer/bg.jpg") 0 0/100% 100% no-repeat;
 }
 .footer__row {
   display: flex;
@@ -124,7 +124,7 @@
 }
 
 .main-screen {
-  background: url("/shelter/img/main-screen/bg.jpg") 0 0/100% 100% no-repeat;
+  background: url("../../shelter/img/main-screen/bg.jpg") 0 0/100% 100% no-repeat;
 }
 .main-screen__container {
   display: flex;
@@ -276,7 +276,7 @@
   width: fit-content;
 }
 .donation__button::before {
-  content: url("/shelter/img/donation/credit-card.svg");
+  content: url("../../shelter/img/donation/credit-card.svg");
   position: absolute;
   left: 15px;
 }
