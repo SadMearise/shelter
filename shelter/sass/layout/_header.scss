@@ -67,6 +67,12 @@
 				color: var(--color-dark-3xl) !important;
 			}
 		}
+		.header-nav-menu__item:hover:nth-child(2) {
+			.header-nav-menu__item-link {
+				color: var(--color-dark-l) !important;
+				cursor: default;
+			}
+		}
 	}
 
 	&__list {
@@ -78,10 +84,11 @@
 			
 			.header-nav-menu__item-link {
 				color: var(--color-light-s);
+				cursor: default;
 			}
 			&_dark {
 				.header-nav-menu__item-link {
-					color: var(--color-dark-3xl);
+					color: var(--color-dark-l);
 				}
 			}
 		}

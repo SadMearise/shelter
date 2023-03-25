@@ -74,9 +74,6 @@
   top: 50%;
   left: 50%;
 }
-.nav-btn_page {
-  background-color: var(--color-primary);
-}
 .nav-btn_prev svg,
 .nav-btn_prev span, .nav-btn_page svg,
 .nav-btn_page span, .nav-btn_next-nav svg,
@@ -125,7 +122,7 @@
   background-color: var(--color-light-l);
 }
 .our-friends__section-title {
-  margin-bottom: 60px;
+  margin-bottom: 59px;
   max-width: 400px;
 }
 .our-friends__slider {

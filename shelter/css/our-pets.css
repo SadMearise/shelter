@@ -46,6 +46,10 @@
 .header-nav-menu_dark .header-nav-menu__item:hover .header-nav-menu__item-link {
   color: var(--color-dark-3xl) !important;
 }
+.header-nav-menu_dark .header-nav-menu__item:hover:nth-child(2) .header-nav-menu__item-link {
+  color: var(--color-dark-l) !important;
+  cursor: default;
+}
 .header-nav-menu__list {
   display: flex;
   align-items: center;
@@ -55,9 +59,10 @@
 }
 .header-nav-menu__list .active .header-nav-menu__item-link {
   color: var(--color-light-s);
+  cursor: default;
 }
 .header-nav-menu__list .active_dark .header-nav-menu__item-link {
-  color: var(--color-dark-3xl);
+  color: var(--color-dark-l);
 }
 .header-nav-menu__item {
   border-bottom: 3px solid transparent;
