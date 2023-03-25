@@ -1,14 +1,16 @@
 @use "sass:math";
 
+@import 'base/fonts';
+
 // Функции и переменные
 @import 'base/variables';
 @import 'base/functions';
 
 :root {
 	// Шрифт по умолчанию
-	--fontFamily: "Georgia";
+	--fontFamily: "georgia";
 
-	--fontFamilyArial: "Arial";
+	--fontFamilyArial: "arial";
 
 	// font-weight. prefix: --fw-
 	--fw-400: 400;
