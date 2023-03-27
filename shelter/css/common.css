@@ -64,6 +64,9 @@
           user-select: none;
   transition: all 0.3s ease 0s;
 }
+.nav-btn[disabled] {
+  cursor: default;
+}
 .nav-btn:not([disabled]):hover {
   background-color: var(--color-primary-light);
   border-color: var(--color-primary-light);
