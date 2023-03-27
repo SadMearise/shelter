@@ -64,10 +64,7 @@
 	cursor: pointer;
 	user-select: none;
 	transition: all .3s ease 0s;
-	
-	&[disabled] {
-		cursor: default;
-	}
+
 	&:not([disabled]):hover {
 		background-color: var(--color-primary-light);
 		border-color: var(--color-primary-light);
