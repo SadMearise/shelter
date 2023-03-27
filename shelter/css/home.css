@@ -19,7 +19,7 @@
   display: flex;
   flex-direction: column;
   gap: 10px;
-  align-items: end;
+  align-items: flex-end;
   font-weight: var(--fw-400);
   font-size: var(--fz-32);
   line-height: 110%;
@@ -140,7 +140,7 @@
   flex: 1 0 100%;
   display: flex;
   justify-content: space-between;
-  align-items: end;
+  align-items: flex-end;
 }
 .main-screen__info-block {
   margin-bottom: 243px;
@@ -226,9 +226,15 @@
 .help {
   background-color: var(--color-light-xl);
 }
+.help__content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 59px;
+  text-align: center;
+}
 .help__section-title {
   max-width: 310px;
-  margin-bottom: 59px;
 }
 .help-items {
   display: flex;

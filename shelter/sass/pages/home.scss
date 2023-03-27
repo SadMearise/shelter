@@ -16,7 +16,7 @@
 		flex: 1 0 100%;
 		display: flex;
 		justify-content: space-between;
-		align-items: end;
+		align-items: flex-end;
 	}
 
 	&__info-block {
@@ -145,9 +145,16 @@
 	&__container {
 	}
 
+	&__content {
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		gap: 59px;
+		text-align: center;
+	}
+
 	&__section-title {
 		max-width: 310px;
-		margin-bottom: 59px;
 	}
 
 	&__list {
