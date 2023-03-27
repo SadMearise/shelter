@@ -68,6 +68,10 @@
   background-color: var(--color-primary-light);
   border-color: var(--color-primary-light);
 }
+.nav-btn:not([disabled]):active {
+  background-color: var(--color-primary);
+  border-color: var(--color-primary);
+}
 .nav-btn svg,
 .nav-btn span {
   position: absolute;
