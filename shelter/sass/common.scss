@@ -64,7 +64,6 @@
 	cursor: pointer;
 	user-select: none;
 	transition: all .3s ease 0s;
-
 	&[disabled] {
 		cursor: default;
 	}
@@ -73,9 +72,21 @@
 		background-color: var(--color-primary-light);
 		border-color: var(--color-primary-light);
 	}
-	&:not([disabled]):active {
-		background-color: var(--color-primary);
-		border-color: var(--color-primary);
+
+	&_start:not([disabled]):active,
+	&_prev-nav:not([disabled]):active,
+	&_page:not([disabled]):active,
+	&_next-nav:not([disabled]):active,
+	&_end:not([disabled]):active {
+		background-color: var(--color-primary) !important;
+		border-color: var(--color-primary) !important;
+	}
+	
+	
+	&_prev:active {
+		.nav-btn {
+			background-color: transparent !important;
+		}
 	}
 	svg,
 	span {
