@@ -75,9 +75,6 @@
   background-color: var(--color-primary) !important;
   border-color: var(--color-primary) !important;
 }
-.nav-btn_prev:active .nav-btn {
-  background-color: transparent !important;
-}
 .nav-btn svg,
 .nav-btn span {
   position: absolute;
