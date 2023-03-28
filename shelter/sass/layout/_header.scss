@@ -36,6 +36,13 @@
 		line-height: 110%;
 		letter-spacing: 0.06em;
 		color: var(--color-primary);
+		transition: color .3s ease 0s;
+		&:hover {
+			color: var(--color-primary-light);
+			span {
+				color: var(--color-dark-m);
+			}
+		}
 		span {
 			font-family: var(--fontFamilyArial);
 			font-weight: var(--fw-400);
@@ -43,6 +50,7 @@
 			line-height: 15px;
 			letter-spacing: 0.1em;
 			color: var(--color-light-xl);
+			transition: color .3s ease 0s;
 		}
 		&_dark {
 			color: var(--color-dark-l);

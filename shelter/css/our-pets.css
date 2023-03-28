@@ -25,6 +25,13 @@
   line-height: 110%;
   letter-spacing: 0.06em;
   color: var(--color-primary);
+  transition: color 0.3s ease 0s;
+}
+.header__title-logo-link:hover {
+  color: var(--color-primary-light);
+}
+.header__title-logo-link:hover span {
+  color: var(--color-dark-m);
 }
 .header__title-logo-link span {
   font-family: var(--fontFamilyArial);
@@ -33,6 +40,7 @@
   line-height: 15px;
   letter-spacing: 0.1em;
   color: var(--color-light-xl);
+  transition: color 0.3s ease 0s;
 }
 .header__title-logo-link_dark {
   color: var(--color-dark-l);
