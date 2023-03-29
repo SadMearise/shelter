@@ -30,11 +30,15 @@
 	}
 
 	&__info-block {
-		@media (min-width: em($breakpoint992)) {
-			margin-bottom: 243px;
-		}
+		margin-bottom: 243px;
+		@media (max-width: em($breakpoint992)) {
+			margin: 0 auto 10px auto;
+		}		
 		@media (max-width: em($breakpoint768)) {
-			margin-bottom: 10px;
+			display: flex;
+			flex-direction: column;
+			align-items: center;
+			text-align: center;
 		}
 	}
 
@@ -53,15 +57,6 @@
 
 .info-block {
 	max-width: 460px;
-	@media (max-width: em($breakpoint992)) {
-		margin: 0 auto;
-	}
-	@media (max-width: em($breakpoint768)) {
-		display: flex;
-		flex-direction: column;
-		align-items: center;
-		text-align: center;
-	}
 	&__title {
 		max-width: 310px;
 		font-weight: var(--fw-400);
