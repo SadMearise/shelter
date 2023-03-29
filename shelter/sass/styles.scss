@@ -51,10 +51,10 @@ $containerPaddingDefault: 80;
 $containerSidePaddingDefault: math.div($containerPaddingDefault, 2);
 
 $containerPaddingL: 60;
-$containerSidePaddingXS: math.div($containerPaddingL, 2);
+$containerSidePaddingM: math.div($containerPaddingL, 2);
 
 $containerPaddingM: 20;
-$containerSidePaddingM: math.div($containerPaddingM, 2);
+$containerSidePaddingXS: math.div($containerPaddingM, 2);
 
 // Обнуление, общие параметры
 @import 'base/reset';
@@ -89,6 +89,13 @@ body {
 	width: 100%;
 	margin: 0 auto;
 	padding: 0 ($containerSidePaddingDefault + px);
+
+	@media (max-width: em($breakpoint1280)) {
+		padding: 0 ($containerSidePaddingM + px);
+	}
+	@media (max-width: em($breakpoint768)) {
+		padding: 0 ($containerSidePaddingXS + px);
+	}
 }
 
 .vertical-indent {

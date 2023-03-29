@@ -179,6 +179,16 @@ body.lock {
   margin: 0 auto;
   padding: 0 40px;
 }
+@media (max-width: 79.99875em) {
+  .container {
+    padding: 0 30px;
+  }
+}
+@media (max-width: 47.99875em) {
+  .container {
+    padding: 0 10px;
+  }
+}
 
 .vertical-indent_s {
   padding-top: 40px;
