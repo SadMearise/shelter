@@ -46,6 +46,7 @@
   --color-dark-xl: #4C4C4C;
   --color-dark-2xl: #444444;
   --color-dark-3xl: #292929;
+  --color-dark: #000000;
   --color-primary: #F1CDB3;
   --color-primary-light: #FDDCC4;
   --fz-12: 12px;
@@ -204,6 +205,21 @@ body.lock {
 }
 @media (max-width: 22.49875em) {
   .vertical-indent_m {
+    padding-top: 42px;
+    padding-bottom: 42px;
+  }
+}
+.vertical-indent_l {
+  padding-top: 80px;
+  padding-bottom: 100px;
+}
+@media (max-width: 61.99875em) {
+  .vertical-indent_l {
+    padding-bottom: 76px;
+  }
+}
+@media (max-width: 22.49875em) {
+  .vertical-indent_l {
     padding-top: 42px;
     padding-bottom: 42px;
   }

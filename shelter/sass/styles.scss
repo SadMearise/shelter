@@ -26,6 +26,7 @@
 	--color-dark-xl: #4C4C4C;
 	--color-dark-2xl: #444444;
 	--color-dark-3xl: #292929;
+	--color-dark: #000000;
 
 	--color-primary: #F1CDB3;
 	--color-primary-light: #FDDCC4;
@@ -108,6 +109,17 @@ body {
 	&_m {
 		padding-top: 80px;
 		padding-bottom: 100px;
+		@media (max-width: em($breakpoint360)) {
+			padding-top: 42px;
+			padding-bottom: 42px;
+		}
+	}
+	&_l {
+		padding-top: 80px;
+		padding-bottom: 100px;
+		@media (max-width: em($breakpoint992)) {
+			padding-bottom: 76px;
+		}
 		@media (max-width: em($breakpoint360)) {
 			padding-top: 42px;
 			padding-bottom: 42px;

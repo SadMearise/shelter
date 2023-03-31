@@ -173,11 +173,41 @@
 		display: flex;
 		margin: 0 -3.75%;
 		padding: 0 8.75%;
+		@media (max-width: em($breakpoint992)) {
+			margin: 0 -52px;
+			padding: 0 94px;
+		}
+		@media (max-width: em($breakpoint576)) {
+			margin: 0 0 20px 0;
+			padding: 0 15px;
+		}
 	}
 
 	&__slide {
 		flex: 0 1 33.3333%;
 		padding: 0 4.167%;
+		@media (max-width: em($breakpoint992)) {
+			padding: 0 20px;
+			flex: 1 1 50%;
+			&:last-child {
+				display: none;
+			}
+		}
+		@media (max-width: em($breakpoint576)) {
+			flex: 1 1 100%;
+			padding: 0;
+			&:nth-child(2) {
+				display: none;
+			}
+		}
+	}
+
+	&__buttons {
+		@media (max-width: em($breakpoint576)) {
+			display: flex;
+			justify-content: space-between;
+			padding: 0 58px;
+		}
 	}
 
 	&__button-wrapper {
@@ -189,6 +219,10 @@
 		}
 		&_next {
 			right: 0;
+		}
+		@media (max-width: em($breakpoint576)) {
+			position: static;
+			transform: none;
 		}
 	}
 

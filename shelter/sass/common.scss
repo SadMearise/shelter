@@ -83,14 +83,7 @@
 		border-color: var(--color-primary-light);
 	}
 
-	&_start:not([disabled]):active,
-	&_prev-nav:not([disabled]):active,
-	&_page:not([disabled]):active,
-	&_next-nav:not([disabled]):active,
-	&_end:not([disabled]):active {
-		background-color: var(--color-primary) !important;
-		border-color: var(--color-primary) !important;
-	}
+	
 
 	svg,
 	span {
@@ -128,6 +121,14 @@
 			}
 		}
 	}
+	&_start:not([disabled]):active,
+	&_prev-nav:not([disabled]):active,
+	&_page:not([disabled]):active,
+	&_next-nav:not([disabled]):active,
+	&_end:not([disabled]):active {
+		background-color: var(--color-primary);
+		border-color: var(--color-primary);
+	}
 }
 
 .h3-title {
@@ -145,7 +146,7 @@
 		color: var(--color-light-xl);
 	}
 
-	@media (max-width: em($breakpoint360)) {
+	@media (max-width: em($breakpoint576)) {
 		font-size: 25px;
 	}
 }
@@ -156,14 +157,17 @@
 	line-height: 115%;
 	letter-spacing: 0.06em;
 	color: var(--color-dark-l);
-
-	&_primary {
-		color: var(--color-primary)
-	}
-	@media (max-width: em($breakpoint768)) {
+	@media (max-width: em($breakpoint576)) {
 		font-size: 15px;
 		line-height: 110%;
 	}
+	&_primary {
+		color: var(--color-primary);
+		@media (max-width: em($breakpoint768)) {
+			font-size: 20px;
+		}
+	}
+	
 }
 
 .our-friends {
@@ -174,10 +178,24 @@
 	&__section-title {
 		margin-bottom: 59px;
 		max-width: 400px;
+		@media (max-width: em($breakpoint576)) {
+			margin-bottom: 42px;
+		}
+		&_small-indent {
+			@media (max-width: em($breakpoint992)) {
+				margin-bottom: 30px;
+			}
+			@media (max-width: em($breakpoint576)) {
+				margin-bottom: 42px;
+			}
+		}
 	}
 
 	&__slider {
 		margin-bottom: 60px;
+		@media (max-width: em($breakpoint576)) {
+			margin-bottom: 42px;
+		}
 	}
 
 	&__button-wrapper {
@@ -192,11 +210,35 @@
 		flex-wrap: wrap;
 		row-gap: 30px;
 		margin: 0 -20px 60px;
+		@media (max-width: em($breakpoint992)) {
+			padding: 0 64px;
+		}
+		@media (max-width: em($breakpoint576)) {
+			padding: 0 15px;
+		}
+		&_small-indent {
+			margin: 0 -20px 40px;
+		}
 	}
 
 	&__item {
 		flex: 0 1 25%;
 		padding: 0 20px;
+		@media (max-width: em($breakpoint992)) {
+			flex-basis: 50%;
+			&:nth-child(7),
+			&:nth-child(8) {
+				display: none;
+			}
+		}
+		@media (max-width: em($breakpoint576)) {
+			flex-basis: 100%;
+			&:nth-child(4),
+			&:nth-child(5),
+			&:nth-child(6) {
+				display: none;
+			}
+		}
 	}
 
 	&__pagination {
