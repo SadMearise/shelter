@@ -3,37 +3,81 @@
 
 .footer {
 	background: url('../../shelter/img/footer/bg.jpg') 0 0/100% 100% no-repeat;
+	@media (max-width: em($breakpoint360)) {
+		background: url('../../shelter/img/footer/bg2.jpg') 0 0/100% 100% no-repeat;
+	}
 	&__container {
 	}
 
 	&__row {
 		display: flex;
 		justify-content: space-between;
+		@media (max-width: em($breakpoint992)) {
+			flex-direction: column;
+		}
+	}
+
+	&__content {
+		display: flex;
+		padding: 16px 0 60px;
+		justify-content: space-between;
+		flex: 0 1 61.7%;
+		gap: 18.5%;
+		@media (max-width: em($breakpoint992)) {
+			justify-content: space-around;
+			padding: 0 20px;
+			margin-bottom: 63px;
+			gap: 10px;
+		}
+		@media (max-width: em($breakpoint576)) {
+			flex-direction: column;
+			padding: 0;
+			gap: 40px;
+			margin-bottom: 42px;
+		}
 	}
 
 	&__col {
 		display: flex;
 		flex-direction: column;
 		justify-content: space-between;
-		flex: 0 0 303px;
-		&:nth-child(2) {
-			margin-left: -20px;
+		flex: 0 1 50%;
+		gap: 33px;
+		@media (max-width: em($breakpoint992)) {
+			flex-basis: 45.5%;
+		}
+		@media (max-width: em($breakpoint576)) {
+			gap: 38px;
 		}
 		&:last-child {
-			margin-top: auto;
-		}
-		&:not(:last-child) {
-			padding: 16px 0 60px;
+			@media (max-width: em($breakpoint576)) {
+				.footer__link-container:last-child {
+					justify-content: flex-start;
+				}
+			}
 		}
 	}
 
 	&__title {
+		@media (max-width: em($breakpoint576)) {
+			max-width: 250px;
+			text-align: center;
+			margin: 0 auto;
+		}
 	}
 
 	&__link-container {
 		display: flex;
 		align-items: center;
 		gap: 20px;
+		@media (max-width: em($breakpoint576)) {
+			justify-content: center;
+			max-width: 300px;
+			margin: 0 auto;
+		}
+		@media (max-width: em($breakpoint320 + 0.02)) {
+			margin: 0;
+		}
 	}
 
 	&__icon {
@@ -47,9 +91,22 @@
 		}
 	}
 
+	&__image-wrapper {
+		display: flex;
+    	align-items: flex-end;
+		@media (max-width: em($breakpoint992)) {
+			justify-content: center;
+		}
+	}
+
 	&__image {
 		max-width: 300px;
 		max-height: 310px;
+		width: 100%;
+		height: auto;
+		@media (max-width: em($breakpoint576)) {
+			max-width: 260px;
+		}
 	}
 
 	*:last-child {

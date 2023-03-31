@@ -26,6 +26,7 @@
 	--color-dark-xl: #4C4C4C;
 	--color-dark-2xl: #444444;
 	--color-dark-3xl: #292929;
+	--color-dark: #000000;
 
 	--color-primary: #F1CDB3;
 	--color-primary-light: #FDDCC4;
@@ -41,8 +42,10 @@
 	--fz-15: 15px;
 	--fz-17: 17px;
 	--fz-20: 20px;
+	--fz-25: 25px;
 	--fz-32: 32px;
 	--fz-35: 35px;
+	--fz-44: 44px;
 }
 
 $containerWidth: 1200;
@@ -51,10 +54,10 @@ $containerPaddingDefault: 80;
 $containerSidePaddingDefault: math.div($containerPaddingDefault, 2);
 
 $containerPaddingL: 60;
-$containerSidePaddingXS: math.div($containerPaddingL, 2);
+$containerSidePaddingM: math.div($containerPaddingL, 2);
 
 $containerPaddingM: 20;
-$containerSidePaddingM: math.div($containerPaddingM, 2);
+$containerSidePaddingXS: math.div($containerPaddingM, 2);
 
 // Обнуление, общие параметры
 @import 'base/reset';
@@ -89,15 +92,39 @@ body {
 	width: 100%;
 	margin: 0 auto;
 	padding: 0 ($containerSidePaddingDefault + px);
+
+	@media (max-width: em($breakpoint1280)) {
+		padding: 0 ($containerSidePaddingM + px);
+	}
+	@media (max-width: em($breakpoint768)) {
+		padding: 0 ($containerSidePaddingXS + px);
+	}
 }
 
 .vertical-indent {
 	&_s {
 		padding-top: 40px;
-		padding-bottom: 0px;
+		@media (max-width: em($breakpoint992)) {
+			padding-top: 30px;
+		}
 	}
 	&_m {
 		padding-top: 80px;
 		padding-bottom: 100px;
+		@media (max-width: em($breakpoint360)) {
+			padding-top: 42px;
+			padding-bottom: 42px;
+		}
+	}
+	&_l {
+		padding-top: 80px;
+		padding-bottom: 100px;
+		@media (max-width: em($breakpoint992)) {
+			padding-bottom: 76px;
+		}
+		@media (max-width: em($breakpoint360)) {
+			padding-top: 42px;
+			padding-bottom: 42px;
+		}
 	}
 }

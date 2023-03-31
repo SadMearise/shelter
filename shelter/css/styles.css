@@ -46,6 +46,7 @@
   --color-dark-xl: #4C4C4C;
   --color-dark-2xl: #444444;
   --color-dark-3xl: #292929;
+  --color-dark: #000000;
   --color-primary: #F1CDB3;
   --color-primary-light: #FDDCC4;
   --fz-12: 12px;
@@ -53,8 +54,10 @@
   --fz-15: 15px;
   --fz-17: 17px;
   --fz-20: 20px;
+  --fz-25: 25px;
   --fz-32: 32px;
   --fz-35: 35px;
+  --fz-44: 44px;
 }
 
 html, body, div, span, applet, object, iframe,
@@ -179,12 +182,47 @@ body.lock {
   margin: 0 auto;
   padding: 0 40px;
 }
+@media (max-width: 79.99875em) {
+  .container {
+    padding: 0 30px;
+  }
+}
+@media (max-width: 47.99875em) {
+  .container {
+    padding: 0 10px;
+  }
+}
 
 .vertical-indent_s {
   padding-top: 40px;
-  padding-bottom: 0px;
+}
+@media (max-width: 61.99875em) {
+  .vertical-indent_s {
+    padding-top: 30px;
+  }
 }
 .vertical-indent_m {
   padding-top: 80px;
   padding-bottom: 100px;
+}
+@media (max-width: 22.49875em) {
+  .vertical-indent_m {
+    padding-top: 42px;
+    padding-bottom: 42px;
+  }
+}
+.vertical-indent_l {
+  padding-top: 80px;
+  padding-bottom: 100px;
+}
+@media (max-width: 61.99875em) {
+  .vertical-indent_l {
+    padding-bottom: 76px;
+  }
+}
+@media (max-width: 22.49875em) {
+  .vertical-indent_l {
+    padding-top: 42px;
+    padding-bottom: 42px;
+  }
 }

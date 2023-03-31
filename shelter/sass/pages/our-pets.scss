@@ -15,4 +15,7 @@
 	&_btn {
 		
 	}
+	@media (max-width: em($breakpoint576)) {
+		gap: 10px;
+	}
 }
