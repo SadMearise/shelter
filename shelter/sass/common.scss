@@ -147,7 +147,7 @@
 	}
 
 	@media (max-width: em($breakpoint576)) {
-		font-size: 25px;
+		font-size: var(--fz-25);
 	}
 }
 
@@ -158,13 +158,13 @@
 	letter-spacing: 0.06em;
 	color: var(--color-dark-l);
 	@media (max-width: em($breakpoint576)) {
-		font-size: 15px;
+		font-size: var(--fz-15);
 		line-height: 110%;
 	}
 	&_primary {
 		color: var(--color-primary);
 		@media (max-width: em($breakpoint768)) {
-			font-size: 20px;
+			font-size: var(--fz-20);
 		}
 	}
 	
@@ -179,20 +179,20 @@
 		margin-bottom: 59px;
 		max-width: 400px;
 		@media (max-width: em($breakpoint576)) {
-			margin-bottom: 42px;
+			margin-bottom: 41px;
 		}
 		&_small-indent {
 			@media (max-width: em($breakpoint992)) {
 				margin-bottom: 30px;
 			}
 			@media (max-width: em($breakpoint576)) {
-				margin-bottom: 42px;
+				margin-bottom: 41px;
 			}
 		}
 	}
 
 	&__slider {
-		margin-bottom: 60px;
+		margin-bottom: 58px;
 		@media (max-width: em($breakpoint576)) {
 			margin-bottom: 42px;
 		}
@@ -217,7 +217,9 @@
 			padding: 0 15px;
 		}
 		&_small-indent {
-			margin: 0 -20px 40px;
+			@media (max-width: em($breakpoint992)) {
+				margin: 0 -20px 42px;
+			}
 		}
 	}
 

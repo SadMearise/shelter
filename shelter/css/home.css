@@ -147,6 +147,11 @@
 .footer {
   background: url("../../shelter/img/footer/bg.jpg") 0 0/100% 100% no-repeat;
 }
+@media (max-width: 22.49875em) {
+  .footer {
+    background: url("../../shelter/img/footer/bg2.jpg") 0 0/100% 100% no-repeat;
+  }
+}
 .footer__row {
   display: flex;
   justify-content: space-between;
@@ -176,7 +181,7 @@
     flex-direction: column;
     padding: 0;
     gap: 40px;
-    margin-bottom: 40px;
+    margin-bottom: 42px;
   }
 }
 .footer__col {
@@ -338,14 +343,14 @@
 .info-block__title {
   max-width: 310px;
   font-weight: var(--fw-400);
-  font-size: 44px;
+  font-size: var(--fz-44);
   line-height: 130%;
   color: var(--color-light-xl);
   margin-bottom: 42px;
 }
 @media (max-width: 47.99875em) {
   .info-block__title {
-    font-size: 25px;
+    font-size: var(--fz-25);
     letter-spacing: 0.06em;
     max-width: 260px;
   }
@@ -385,7 +390,7 @@
 }
 @media (max-width: 22.49875em) {
   .about-the-shelter__row {
-    gap: 42px;
+    gap: 41px;
   }
 }
 .about-the-shelter__image {
@@ -541,7 +546,7 @@
   .help-items {
     justify-content: flex-start;
     padding: 0px;
-    row-gap: 30px;
+    row-gap: 29px;
     margin: 0 -10px;
   }
 }
@@ -650,7 +655,7 @@
 }
 @media (max-width: 47.99875em) {
   .donation__subtitle {
-    font-size: 15px;
+    font-size: var(--fz-15);
     line-height: 160%;
     letter-spacing: 0;
   }

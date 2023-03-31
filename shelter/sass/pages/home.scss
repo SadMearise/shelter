@@ -66,12 +66,12 @@
 	&__title {
 		max-width: 310px;
 		font-weight: var(--fw-400);
-		font-size: 44px;
+		font-size: var(--fz-44);
 		line-height: 130%;
 		color: var(--color-light-xl);
 		margin-bottom: 42px;
 		@media (max-width: em($breakpoint768)) {
-			font-size: 25px;
+			font-size: var(--fz-25);
 			letter-spacing: 0.06em;
 			max-width: 260px;
 		}
@@ -120,7 +120,7 @@
 			padding: 0 15px;
 		}
 		@media (max-width: em($breakpoint360)) {
-			gap: 42px;
+			gap: 41px;
 		}
 	}
 
@@ -277,7 +277,7 @@
 	@media (max-width: em($breakpoint768)) {
 		justify-content: flex-start;
 		padding: 0px;
-		row-gap: 30px;
+		row-gap: 29px;
 		margin: 0 -10px;
 	}
 
@@ -370,7 +370,7 @@
 		margin-bottom: 20px;
 		white-space: nowrap;
 		@media (max-width: em($breakpoint768)) {
-			font-size: 15px;
+			font-size: var(--fz-15);
 			line-height: 160%;
 			letter-spacing: 0;
 		}

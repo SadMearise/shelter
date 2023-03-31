@@ -3,6 +3,9 @@
 
 .footer {
 	background: url('../../shelter/img/footer/bg.jpg') 0 0/100% 100% no-repeat;
+	@media (max-width: em($breakpoint360)) {
+		background: url('../../shelter/img/footer/bg2.jpg') 0 0/100% 100% no-repeat;
+	}
 	&__container {
 	}
 
@@ -30,7 +33,7 @@
 			flex-direction: column;
 			padding: 0;
 			gap: 40px;
-			margin-bottom: 40px;
+			margin-bottom: 42px;
 		}
 	}
 

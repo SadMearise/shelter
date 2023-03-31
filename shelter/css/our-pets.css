@@ -147,6 +147,11 @@
 .footer {
   background: url("../../shelter/img/footer/bg.jpg") 0 0/100% 100% no-repeat;
 }
+@media (max-width: 22.49875em) {
+  .footer {
+    background: url("../../shelter/img/footer/bg2.jpg") 0 0/100% 100% no-repeat;
+  }
+}
 .footer__row {
   display: flex;
   justify-content: space-between;
@@ -176,7 +181,7 @@
     flex-direction: column;
     padding: 0;
     gap: 40px;
-    margin-bottom: 40px;
+    margin-bottom: 42px;
   }
 }
 .footer__col {
