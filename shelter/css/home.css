@@ -186,6 +186,11 @@
 .main-screen {
   background: url("../../shelter/img/main-screen/bg.jpg") 0 0/100% 100% no-repeat;
 }
+@media (max-width: 22.49875em) {
+  .main-screen {
+    background: url("../../shelter/img/main-screen/bg2.jpg") 0 0/100% 100% no-repeat;
+  }
+}
 .main-screen__container {
   display: flex;
   flex-direction: column;
@@ -206,6 +211,8 @@
   display: flex;
   justify-content: space-between;
   align-items: flex-end;
+  -moz-column-gap: 10px;
+       column-gap: 10px;
 }
 @media (max-width: 61.99875em) {
   .main-screen__content {
@@ -248,6 +255,13 @@
 .info-block {
   max-width: 460px;
 }
+@media (max-width: 992px) and (min-width: 768px) {
+  .info-block {
+    max-width: calc(
+                    460px + 330 * ((100vw - 768px) / 224)
+            );
+  }
+}
 .info-block__title {
   max-width: 310px;
   font-weight: var(--fw-400);
@@ -289,9 +303,36 @@
   justify-content: center;
   gap: 10%;
 }
+@media (max-width: 61.99875em) {
+  .about-the-shelter__row {
+    flex-direction: column-reverse;
+    gap: 80px;
+    padding: 0 15px;
+  }
+}
+@media (max-width: 22.49875em) {
+  .about-the-shelter__row {
+    gap: 42px;
+  }
+}
+.about-the-shelter__image {
+  width: 100%;
+  height: auto;
+}
+@media (max-width: 22.49875em) {
+  .about-the-shelter__image {
+    max-width: 260px;
+    max-height: 353px;
+  }
+}
 .about-the-shelter__section-title {
   margin-bottom: 25px;
   max-width: 370px;
+}
+@media (max-width: 22.49875em) {
+  .about-the-shelter__section-title {
+    text-align: center;
+  }
 }
 .about-the-shelter__text {
   font-family: var(--fontFamilyArial);
@@ -301,6 +342,19 @@
   color: var(--color-dark-xl);
   margin-bottom: 25px;
   max-width: 430px;
+}
+@media (max-width: 992px) and (min-width: 768px) {
+  .about-the-shelter__text {
+    max-width: calc(
+                    430px + 570 * ((100vw - 768px) / 224)
+            );
+  }
+}
+@media (max-width: 47.99875em) {
+  .about-the-shelter__text {
+    margin-bottom: 22px;
+    text-align: justify;
+  }
 }
 .about-the-shelter *:last-child {
   margin-bottom: 0;
@@ -339,25 +393,72 @@
   gap: 59px;
   text-align: center;
 }
+@media (max-width: 22.49875em) {
+  .help__content {
+    gap: 42px;
+  }
+}
 .help__section-title {
   max-width: 310px;
+}
+@media (max-width: 22.49875em) {
+  .help__section-title {
+    max-width: 225px;
+  }
 }
 .help-items {
   display: flex;
   justify-content: center;
   flex-wrap: wrap;
   row-gap: 55px;
-  -moz-column-gap: 120px;
-       column-gap: 120px;
+  -moz-column-gap: 11.4%;
+       column-gap: 11.4%;
+}
+@media (max-width: 61.99875em) {
+  .help-items {
+    -moz-column-gap: 0;
+         column-gap: 0;
+    padding: 0px 9px;
+  }
+}
+@media (max-width: 47.99875em) {
+  .help-items {
+    justify-content: flex-start;
+    padding: 0px;
+    row-gap: 30px;
+    margin: 0 -10px;
+  }
 }
 .help-items__item {
   display: flex;
   flex-direction: column;
   align-items: center;
+  row-gap: 30px;
 }
-.help-items__icon {
-  margin-bottom: 30px;
+@media (max-width: 61.99875em) {
+  .help-items__item {
+    flex: 0 1 33.3333%;
+  }
 }
+@media (max-width: 47.99875em) {
+  .help-items__item {
+    flex: 0 1 50%;
+    row-gap: 21px;
+    padding: 0 10px;
+  }
+}
+@media (max-width: 22.49875em) {
+  .help-items__icon {
+    width: 100%;
+    height: auto;
+    max-width: 50px;
+    max-height: 50px;
+  }
+}
+.help-items__title {
+  white-space: nowrap;
+}
+
 .donation {
   background-color: var(--color-light-l);
 }
@@ -367,16 +468,60 @@
   gap: 30px;
   align-items: center;
 }
+@media (max-width: 992px) {
+  .donation__row {
+    gap: calc(
+                    60px + -30 * ((100vw - 768px) / 224)
+            );
+  }
+}
+@media (max-width: 768px) {
+  .donation__row {
+    gap: calc(
+                    42px + 18 * ((100vw - 320px) / 448)
+            );
+  }
+}
+@media (max-width: 61.99875em) {
+  .donation__row {
+    flex-direction: column-reverse;
+  }
+}
+@media (max-width: 22.49875em) {
+  .donation__row {
+    padding: 0 10px;
+  }
+}
 .donation__col {
   display: flex;
   flex-direction: column;
 }
 .donation__col:last-child {
-  flex: 0 1 380px;
+  max-width: 380px;
+}
+@media (max-width: 47.99875em) {
+  .donation__col:last-child {
+    align-items: center;
+    text-align: center;
+  }
+}
+.donation__image {
+  width: 100%;
+  height: auto;
+}
+@media (max-width: 22.49875em) {
+  .donation__image {
+    max-width: 260px;
+  }
 }
 .donation__section-title {
   margin-bottom: 20px;
   max-width: 300px;
+}
+@media (max-width: 22.49875em) {
+  .donation__section-title {
+    max-width: 220px;
+  }
 }
 .donation__subtitle {
   font-weight: var(--fw-400);
@@ -385,6 +530,14 @@
   letter-spacing: 0.06em;
   color: var(--color-dark-l);
   margin-bottom: 20px;
+  white-space: nowrap;
+}
+@media (max-width: 47.99875em) {
+  .donation__subtitle {
+    font-size: 15px;
+    line-height: 160%;
+    letter-spacing: 0;
+  }
 }
 .donation__button {
   position: relative;
@@ -394,8 +547,12 @@
 }
 .donation__button::before {
   content: url("../../shelter/img/donation/credit-card.svg");
+  height: 23px;
+  width: 30px;
   position: absolute;
+  top: 50%;
   left: 15px;
+  transform: translateY(-50%);
 }
 .donation__text {
   font-family: var(--fontFamilyArial);
@@ -404,6 +561,11 @@
   font-size: var(--fz-12);
   line-height: 18px;
   color: var(--color-dark-m);
+}
+@media (max-width: 47.99875em) {
+  .donation__text {
+    text-align: justify;
+  }
 }
 .donation *:last-child {
   margin-bottom: 0;

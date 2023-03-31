@@ -32,6 +32,32 @@
   border: 0;
   border-radius: 9px;
 }
+@media (max-width: 768px) {
+  .btn_donation {
+    font-size: calc(
+                    15px + 5 * ((100vw - 320px) / 448)
+            );
+  }
+}
+@media (max-width: 768px) {
+  .btn_donation {
+    padding-top: calc(
+                    13px + -3 * ((100vw - 320px) / 448)
+            );
+  }
+}
+@media (max-width: 768px) {
+  .btn_donation {
+    padding-bottom: calc(
+                    13px + -3 * ((100vw - 320px) / 448)
+            );
+  }
+}
+@media (max-width: 47.99875em) {
+  .btn_donation {
+    line-height: 110%;
+  }
+}
 .btn_light {
   padding: 13px 43px;
   background-color: var(--color-light-s);
@@ -113,6 +139,11 @@
 .h3-title_light {
   color: var(--color-light-xl);
 }
+@media (max-width: 22.49875em) {
+  .h3-title {
+    font-size: 25px;
+  }
+}
 
 .h4-title {
   font-weight: var(--fw-400);
@@ -123,6 +154,12 @@
 }
 .h4-title_primary {
   color: var(--color-primary);
+}
+@media (max-width: 47.99875em) {
+  .h4-title {
+    font-size: 15px;
+    line-height: 110%;
+  }
 }
 
 .our-friends {

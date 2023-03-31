@@ -1,0 +1,22 @@
+@mixin adaptive-value($property, $maxSize, $minSize, $widthFrom: var(--containerWidth), $widthTo: var(--minWidth), $keepSize: 1) { 
+    $addSize: $maxSize - $minSize; 
+    @if $keepSize == 1 { // в промежутке
+        @media (max-width: #{$widthFrom + px}) and (min-width: #{$widthTo + px}) { 
+            #{$property}: calc( 
+                    #{$minSize + px} + #{$addSize} * ((100vw - #{$widthTo + px}) / #{$widthFrom - $widthTo}) 
+            ); 
+        } 
+    } @else if $keepSize == 2 { // все что меньше $widthFrom
+        @media (max-width: #{$widthFrom + px}) { 
+            #{$property}: calc( 
+                    #{$minSize + px} + #{$addSize} * ((100vw - #{$widthTo + px}) / #{$widthFrom - $widthTo}) 
+            ); 
+        } 
+    } @else if $keepSize == 3 { // все что больше $widthFrom
+        @media (min-width: #{$widthFrom + px}) { 
+            #{$property}: calc(#{$minSize + px} + #{$addSize} * ((100vw - #{$widthTo + px}) / #{var(--maxWidth) - $widthTo})); 
+        } 
+    } @else { 
+        #{$property}: calc(#{$minSize + px} + #{$addSize} * ((100vw - #{$widthTo + px}) / #{var(--maxWidth) - $widthTo})); 
+    } 
+}
