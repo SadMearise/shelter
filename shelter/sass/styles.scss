@@ -94,10 +94,12 @@ body {
 	padding: 0 ($containerSidePaddingDefault + px);
 
 	@media (max-width: em($breakpoint1280)) {
-		padding: 0 ($containerSidePaddingM + px);
+		padding-left: ($containerSidePaddingM + px);
+		padding-right: ($containerSidePaddingM + px);
 	}
 	@media (max-width: em($breakpoint768)) {
-		padding: 0 ($containerSidePaddingXS + px);
+		padding-left: ($containerSidePaddingXS + px);
+		padding-right: ($containerSidePaddingXS + px);
 	}
 }
 
