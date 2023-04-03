@@ -218,6 +218,11 @@
 }
 @media (max-width: 61.99875em) {
   .our-friends__list_small-indent {
+    margin: 0 -20px 40px;
+  }
+}
+@media (max-width: 35.99875em) {
+  .our-friends__list_small-indent {
     margin: 0 -20px 42px;
   }
 }
