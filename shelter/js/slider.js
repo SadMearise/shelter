@@ -102,8 +102,8 @@ document.addEventListener('keydown', function(event) {
 })
 
 const slider = document.querySelector('.friends-slider__wrapper');
-const btnPrev = document.querySelector('.friends-slider__button-prev');
-const btnNext = document.querySelector('.friends-slider__button-next');
+const btnPrev = document.querySelector('.our-friends__slider-button-prev');
+const btnNext = document.querySelector('.our-friends__slider-button-next');
 const slideSetLeft = document.getElementById('slide-set-left');
 const slideSetActive = document.getElementById('slide-set-active');
 const slideSetRight = document.getElementById('slide-set-right');
@@ -122,7 +122,7 @@ const createCardTemplate = (object, number) => {
 							</div>
 							<div class="pet-card__row">
 								<span class="pet-card__title">${object[number].name}</span>
-								<a href="our-pets.html" class="pet-card__button btn btn_light">Learn more</a>
+								<a href="#no_scroll" class="pet-card__button btn btn_light">Learn more</a>
 							</div>
 						</div>  
 					</div>`

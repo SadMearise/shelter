@@ -187,10 +187,11 @@
 		display: flex;
 		flex: 1 0 100%;
 		justify-content: space-between;
-		padding: 0 105px;
+		padding: 0 53px;
 		gap: 20px;
 		@media (max-width: em($breakpoint992)) {
-			padding: 0 64px;
+			padding: 0 12px;
+			gap: 40px;
 		}
 		@media (max-width: em($breakpoint576)) {
 			gap: 0;
@@ -203,30 +204,30 @@
 
 	}
 
-	&__buttons {
-		@media (max-width: em($breakpoint576)) {
-			display: flex;
-			justify-content: space-between;
-			padding: 0 58px;
-			margin-bottom: 42px;
-		}
-	}
+	// &__buttons {
+	// 	@media (max-width: em($breakpoint576)) {
+	// 		display: flex;
+	// 		justify-content: space-between;
+	// 		padding: 0 58px;
+	// 		margin-bottom: 42px;
+	// 	}
+	// }
 
-	&__button-wrapper {
-		position: absolute;
-		top: 50%;
-		transform: translateY(-50%);
-		&_prev {
-			left: 0;
-		}
-		&_next {
-			right: 0;
-		}
-		@media (max-width: em($breakpoint576)) {
-			position: static;
-			transform: none;
-		}
-	}
+	// &__button-wrapper {
+	// 	position: absolute;
+	// 	top: 50%;
+	// 	transform: translateY(-50%);
+	// 	&_prev {
+	// 		left: 0;
+	// 	}
+	// 	&_next {
+	// 		right: 0;
+	// 	}
+	// 	@media (max-width: em($breakpoint576)) {
+	// 		position: static;
+	// 		transform: none;
+	// 	}
+	// }
 
 	&__button-prev {
 	}
