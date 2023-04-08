@@ -74,6 +74,11 @@
 	cursor: pointer;
 	user-select: none;
 	transition: all .3s ease 0s;
+
+	&_close {
+		border-color: var(--color-primary);
+	}
+
 	&[disabled] {
 		cursor: default;
 	}
@@ -82,8 +87,6 @@
 		background-color: var(--color-primary-light);
 		border-color: var(--color-primary-light);
 	}
-
-	
 
 	svg,
 	span {
@@ -95,6 +98,7 @@
 	&_page {
 	}
 
+	&_close,
 	&_prev,
 	&_page,
 	&_next-nav,
@@ -137,6 +141,16 @@
 	line-height: 130%;
 	letter-spacing: 0.06em;
 	color: var(--color-dark-l);
+
+	@media (max-width: em($breakpoint576)) {
+		font-size: var(--fz-25);
+	}
+
+	&_big {
+		@media (max-width: em($breakpoint576)) {
+			font-size: var(--fz-35);
+		}
+	}
 	&_center {
 		margin-left: auto;
 		margin-right: auto;
@@ -145,9 +159,8 @@
 	&_light {
 		color: var(--color-light-xl);
 	}
-
-	@media (max-width: em($breakpoint576)) {
-		font-size: var(--fz-25);
+	&_dark {
+		color: var(--color-dark);;
 	}
 }
 
@@ -176,11 +189,7 @@
 	}
 
 	&__section-title {
-		margin-bottom: 59px;
 		max-width: 400px;
-		@media (max-width: em($breakpoint576)) {
-			margin-bottom: 41px;
-		}
 		&_small-indent {
 			@media (max-width: em($breakpoint992)) {
 				margin-bottom: 30px;
@@ -192,10 +201,6 @@
 	}
 
 	&__slider {
-		margin-bottom: 58px;
-		@media (max-width: em($breakpoint576)) {
-			margin-bottom: 42px;
-		}
 	}
 
 	&__button-wrapper {
@@ -248,10 +253,6 @@
 
 	&__pagination {
 	}
-
-	*:last-child {
-		margin-bottom: 0;
-	}
 }
 
 .pet-card {
@@ -276,10 +277,6 @@
 		flex-direction: column;
 		align-items: center;
 		justify-content: center;
-		&:first-child {
-			position: relative;
-			padding-top: 100%;
-		}
 		&:last-child {
 			gap: 30px;
 			padding: 30px 0;
@@ -287,15 +284,12 @@
 	}
 
 	&__image {
-		position: absolute;
-		top: 0;
-		left: 0;
 		width: 100%;
-		height: 100%;
+		height: auto;
+		max-width: 270px;
 		object-fit: contain;
 		border-top-left-radius: 9px;
 		border-top-right-radius: 9px;
-		transition: all .3s ease 0s;
 	}
 
 	&__title {

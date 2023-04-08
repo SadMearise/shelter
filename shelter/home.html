@@ -7,6 +7,7 @@
 		<link rel="stylesheet" href="css/styles.css">
 		<link rel="stylesheet" href="css/home.css">
 		<link rel="stylesheet" href="css/common.css">
+		<link rel="stylesheet" href="css/popup.css">
 		<link rel="shortcut icon" href="favicon.ico">
 		<title>Home</title>
 	</head>
@@ -80,52 +81,22 @@
 
 					<div class="our-friends__slider friends-slider">
 						<div class="friends-slider__wrapper">
-							<div class="friends-slider__slide pet-card">
-								<div class="pet-card__content">
-									<div class="pet-card__row">
-										<img src="./img/friends/pets-katrine.png" alt="pet" class="pet-card__image">
-									</div>
-									<div class="pet-card__row">
-										<span class="pet-card__title">Katrine</span>
-										<a href="our-pets.html" class="pet-card__button btn btn_light">Learn more</a>
-									</div>
-								</div>
-							</div>
-							<div class="friends-slider__slide pet-card">
-								<div class="pet-card__content">
-									<div class="pet-card__row">
-										<img src="./img/friends/pets-jennifer.png" alt="pet" class="pet-card__image">
-									</div>
-									<div class="pet-card__row">
-										<span class="pet-card__title">Jennifer</span>
-										<a href="our-pets.html" class="pet-card__button btn btn_light">Learn more</a>
-									</div>
-								</div>
-							</div>
-							<div class="friends-slider__slide pet-card">
-								<div class="pet-card__content">
-									<div class="pet-card__row">
-										<img src="./img/friends/pets-woody.png" alt="pet" class="pet-card__image">
-									</div>
-									<div class="pet-card__row">
-										<span class="pet-card__title">Woody</span>
-										<a href="our-pets.html" class="pet-card__button btn btn_light">Learn more</a>
-									</div>
-								</div>
-							</div>
+							<div class="friends-slider__slide-set" id="slide-set-left"></div>
+							<div class="friends-slider__slide-set" id="slide-set-active"></div>
+							<div class="friends-slider__slide-set" id="slide-set-right"></div>
 						</div>
 						<div class="friends-slider__buttons">
 							<div class="friends-slider__button-wrapper friends-slider__button-wrapper_prev">
 								<button class="friends-slider__button-prev nav-btn nav-btn_prev">
 									<svg width="14" height="6" viewBox="0 0 14 6" fill="none" xmlns="http://www.w3.org/2000/svg">
-										<path d="M14 2V4H3V6L0 3L3 0V2H14Z" fill="var(--color-dark-3xl)"/>
+										<path d="M14 2V4H3V6L0 3L3 0V2H14Z" fill="#292929"/>
 									</svg>
 								</button>
 							</div>
 							<div class="friends-slider__button-wrapper friends-slider__button-wrapper_next">
 								<button class="friends-slider__button-next nav-btn nav-btn_next">
 									<svg width="14" height="6" viewBox="0 0 14 6" fill="none" xmlns="http://www.w3.org/2000/svg">
-										<path d="M14 2V4H3V6L0 3L3 0V2H14Z" fill="var(--color-dark-3xl)"/>
+										<path d="M14 2V4H3V6L0 3L3 0V2H14Z" fill="#292929"/>
 									</svg>
 								</button>
 							</div>
@@ -257,7 +228,9 @@
 			</div>
 		</footer>
 	</div>
+	<div class="insert-popup"></div>
 	<script src="js/index.js"></script>
-	<script src="js/script.js"></script>
+	<script src="js/burger.js"></script>
+	<script type="module" src="js/slider.js"></script>
 </body>
 </html>

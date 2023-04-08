@@ -29,5 +29,3 @@ const burgerMenu = function () {
 }
 
 burgerMenu();
-
-
