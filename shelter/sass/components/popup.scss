@@ -184,7 +184,6 @@
 			background-color: #F1CDB3;
 			
 		}
-		// list-style-position: inside;
 		& + & {
 			margin-top: 10px;
 			@media (max-width: em($breakpoint768 + 0.02)) {

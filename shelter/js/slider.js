@@ -12,9 +12,10 @@ const breakpoint576 = 575.98;
 
 let count = 1;
 let lastMove;
+let prevMove;
 
 const createCardTemplate = (object, number) => {
-	const card =   `<div class="friends-slider__slide pet-card popup-link" data-number="${number}">
+	const card = `<div class="friends-slider__slide pet-card popup-link" data-number="${number}">
 						<div class="pet-card__content">
 							<div class="pet-card__row">
 								<img src="${object[number].img}" alt="pet" class="pet-card__image">
@@ -40,7 +41,7 @@ export const init = () => {
 	const mediaQuery992 = window.matchMedia(`(max-width: ${functions.toEm(breakpoint992)})`);
 	const mediaQuery576 = window.matchMedia(`(max-width: ${functions.toEm(breakpoint576)})`);
 	let countElements;
-	
+
 	if (mediaQuery576.matches) {
 		countElements = 1;
 	} else if (mediaQuery992.matches) {
@@ -59,9 +60,6 @@ export const init = () => {
 		slideSetRight.removeChild(slideSetRight.firstChild);
 	}
 
-	let q = [];
-	let w = [];
-	let e = [];
 	for (let i = 0; i < countElements; i++) {
 		const cardLeft = createCardTemplate(pets, leftArray[i]);
 		const cardActive = createCardTemplate(pets, activeArray[i]);
@@ -70,13 +68,8 @@ export const init = () => {
 		slideSetLeft.insertAdjacentHTML('beforeend', cardLeft);
 		slideSetActive.insertAdjacentHTML('beforeend', cardActive);
 		slideSetRight.insertAdjacentHTML('beforeend', cardRight);
-		q.push(pets[leftArray[i]].name + leftArray[i]);
-		w.push(pets[activeArray[i]].name + activeArray[i]);
-		e.push(pets[rightArray[i]].name + rightArray[i]);
+
 	}
-	console.log('left:', q);
-	console.log('active:', w);
-	console.log('right:', e);
 	const width = slider.offsetWidth;
 	slider.style.left = -(width) + 'px';
 }
@@ -91,22 +84,12 @@ export const setDefaultState = () => {
 const rollSlider = () => {
 	slider.classList.add('shift');
 	let supValue = 0;
-	if (count == 1) { lastMove == 'prev' ? supValue-- : supValue++; } 
+	if (count == 1) { lastMove == 'prev' ? supValue-- : supValue++; }
 	const width = slider.offsetWidth;
 	slider.style.left = -((count + supValue) * width) + 'px';
 }
 
-btnPrev.addEventListener('click', function() {
-	lastMove = 'prev';
-	count == 0 ? count : count--;
-	rollSlider();
-})
-
-btnNext.addEventListener('click', function() {
-	lastMove = 'next';
-	count == 2 ? count : count++;
-	rollSlider();
-})
+let start = true;
 
 function addNewItem() {
 	let changedItem;
@@ -130,7 +113,7 @@ function addNewItem() {
 	const mediaQuery576 = window.matchMedia(`(max-width: ${functions.toEm(breakpoint576)})`);
 
 	let countElements;
-	
+
 	if (mediaQuery576.matches) {
 		countElements = 1;
 	} else if (mediaQuery992.matches) {
@@ -143,10 +126,38 @@ function addNewItem() {
 		changedItem.removeChild(changedItem.firstChild);
 	}
 
-	
-	activeArray = functions.randomArray(activeArray);
+	if (start == true) {
+		if (lastMove == 'next') activeArray = functions.randomArray(rightArray);
+		if (lastMove == 'prev') activeArray = functions.randomArray(leftArray);
+		start = false;
+	} else {
+		if (prevMove == lastMove) {
+				activeArray = functions.randomArray(activeArray);		
+		} else {
+			let currentArray = [];
+			activeSet.childNodes.forEach(el => {
+				currentArray.push(Number(el.dataset.number))
+			})
+			activeArray = functions.randomArray(currentArray);
+		}
+	}
+
 	for (let i = 0; i < countElements; i++) {
 		const card = createCardTemplate(pets, activeArray[i]);
 		changedItem.insertAdjacentHTML('beforeend', card);
 	}
 }
+
+btnPrev.addEventListener('click', function () {
+	prevMove = lastMove;
+	lastMove = 'prev';
+	count == 0 ? count : count--;
+	rollSlider();
+})
+
+btnNext.addEventListener('click', function () {
+	prevMove = lastMove;
+	lastMove = 'next';
+	count == 2 ? count : count++;
+	rollSlider();
+})

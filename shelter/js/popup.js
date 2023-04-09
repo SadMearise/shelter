@@ -68,7 +68,6 @@ export const initPopups = (object) => {
 				placement.insertAdjacentHTML('beforeend', popupHTML);
 
 				const popup = document.getElementById('popup');
-				console.log(popup);
 				popupOpen(popup);
 			})
 		}
