@@ -165,9 +165,7 @@
 }
 // /section about-the-shelter
 
-.shift {
-	transition: left .5s ease-out;
-}
+
 // section our friends
 .friends-slider {
 	position: relative;
@@ -177,10 +175,14 @@
 		position: relative;
 		padding-top: 59px;;
 		padding-bottom: 58px;
+		&.shift {
+			transition: left .5s ease-out;
+		}
 		@media (max-width: em($breakpoint576)) {
 			padding-top: 42px;
 			padding-bottom: 20px;
 		}
+		
 	}
 
 	&__slide-set {

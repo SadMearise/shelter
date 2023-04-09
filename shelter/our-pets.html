@@ -7,6 +7,7 @@
 		<link rel="stylesheet" href="css/styles.css">
 		<link rel="stylesheet" href="css/our-pets.css">
 		<link rel="stylesheet" href="css/common.css">
+		<link rel="stylesheet" href="css/popup.css">
 		<link rel="shortcut icon" href="favicon.ico">
 		<title>Home</title>
 	</head>
@@ -46,105 +47,18 @@
 				<div class="our-friends__container container vertical-indent vertical-indent_l">
 					<h3 class="our-friends__section-title our-friends__section-title_small-indent h3-title h3-title_center">Our friends who <br> are looking for a house</h3>
 					<ul class="our-friends__list our-friends__list_small-indent">
-						<li class="our-friends__item pet-card">
-							<div class="pet-card__content">
-								<div class="pet-card__row">
-									<img src="./img/friends/pets-katrine.png" alt="pet" class="pet-card__image">
-								</div>
-								<div class="pet-card__row">
-									<span class="pet-card__title">Katrine</span>
-									<a href="our-pets.html" class="pet-card__button btn btn_light">Learn more</a>
-								</div>
-							</div>
-						</li>
-						<li class="our-friends__item pet-card">
-							<div class="pet-card__content">
-								<div class="pet-card__row">
-									<img src="./img/friends/pets-jennifer.png" alt="pet" class="pet-card__image">
-								</div>
-								<div class="pet-card__row">
-									<span class="pet-card__title">Jennifer</span>
-									<a href="our-pets.html" class="pet-card__button btn btn_light">Learn more</a>
-								</div>
-							</div>
-						</li>
-						<li class="our-friends__item pet-card">
-							<div class="pet-card__content">
-								<div class="pet-card__row">
-									<img src="./img/friends/pets-woody.png" alt="pet" class="pet-card__image">
-								</div>
-								<div class="pet-card__row">
-									<span class="pet-card__title">Woody</span>
-									<a href="our-pets.html" class="pet-card__button btn btn_light">Learn more</a>
-								</div>
-							</div>
-						</li>
-						<li class="our-friends__item pet-card">
-							<div class="pet-card__content">
-								<div class="pet-card__row">
-									<img src="./img/friends/pets-sophia.png" alt="pet" class="pet-card__image">
-								</div>
-								<div class="pet-card__row">
-									<span class="pet-card__title">Sophia</span>
-									<a href="our-pets.html" class="pet-card__button btn btn_light">Learn more</a>
-								</div>
-							</div>
-						</li>
-						<li class="our-friends__item pet-card">
-							<div class="pet-card__content">
-								<div class="pet-card__row">
-									<img src="./img/friends/pets-timmy.png" alt="pet" class="pet-card__image">
-								</div>
-								<div class="pet-card__row">
-									<span class="pet-card__title">Timmy</span>
-									<a href="our-pets.html" class="pet-card__button btn btn_light">Learn more</a>
-								</div>
-							</div>
-						</li>
-						<li class="our-friends__item pet-card">
-							<div class="pet-card__content">
-								<div class="pet-card__row">
-									<img src="./img/friends/pets-charly.png" alt="pet" class="pet-card__image">
-								</div>
-								<div class="pet-card__row">
-									<span class="pet-card__title">Charly</span>
-									<a href="our-pets.html" class="pet-card__button btn btn_light">Learn more</a>
-								</div>
-							</div>
-						</li>
-						<li class="our-friends__item pet-card">
-							<div class="pet-card__content">
-								<div class="pet-card__row">
-									<img src="./img/friends/pets-scarlet.png" alt="pet" class="pet-card__image">
-								</div>
-								<div class="pet-card__row">
-									<span class="pet-card__title">Scarlett</span>
-									<a href="our-pets.html" class="pet-card__button btn btn_light">Learn more</a>
-								</div>
-							</div>
-						</li>
-						<li class="our-friends__item pet-card">
-							<div class="pet-card__content">
-								<div class="pet-card__row">
-									<img src="./img/friends/pets-freddie.png" alt="pet" class="pet-card__image">
-								</div>
-								<div class="pet-card__row">
-									<span class="pet-card__title">Freddie</span>
-									<a href="our-pets.html" class="pet-card__button btn btn_light">Learn more</a>
-								</div>
-							</div>
-						</li>
+
 					</ul>
 					<ul class="our-friends__pagination pagination">
 						<li class="pagination__item">
-							<button class="pagination__btn nav-btn nav-btn_start nav-btn_inactive-nav" disabled>
+							<button class="pagination__btn nav-btn nav-btn_start" disabled>
 								<svg width="25" height="11" viewBox="0 0 25 11" fill="none" xmlns="http://www.w3.org/2000/svg">
 									<path d="M10.0055 6.08789L0.972265 10.7852V9.44727L8.48203 5.53125L0.972265 1.625V0.287109L10.0055 4.98438V6.08789ZM24.0766 6.08789L15.0434 10.7852V9.44727L22.5531 5.53125L15.0434 1.625V0.287109L24.0766 4.98438V6.08789Z" fill="var(--color-dark-3xl)"/>
 								</svg>
 							</button>
 						</li>
 						<li class="pagination__item">
-							<button class="pagination__btn nav-btn nav-btn_prev-nav nav-btn_inactive-nav" disabled>
+							<button class="pagination__btn nav-btn nav-btn_prev-nav" disabled>
 								<svg width="10" height="11" viewBox="0 0 10 11" fill="none" xmlns="http://www.w3.org/2000/svg">
 									<path d="M9.04102 6.08789L0.0078125 10.7852V9.44727L7.51758 5.53125L0.0078125 1.625V0.287109L9.04102 4.98438V6.08789Z" fill="var(--color-dark-3xl)"/>
 								</svg>
@@ -226,7 +140,8 @@
 			</div>
 		</footer>
 	</div>
-	<script src="js/index.js"></script>
+	<div class="insert-popup"></div>
 	<script src="js/burger.js"></script>
+	<script type="module" src="js/pagination.js"></script>
 </body>
 </html>

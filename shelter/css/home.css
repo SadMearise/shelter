@@ -488,10 +488,6 @@
   margin-bottom: 0;
 }
 
-.shift {
-  transition: left 0.5s ease-out;
-}
-
 .friends-slider {
   position: relative;
   overflow: hidden;
@@ -501,6 +497,9 @@
   position: relative;
   padding-top: 59px;
   padding-bottom: 58px;
+}
+.friends-slider__wrapper.shift {
+  transition: left 0.5s ease-out;
 }
 @media (max-width: 35.99875em) {
   .friends-slider__wrapper {

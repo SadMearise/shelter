@@ -81,6 +81,12 @@
 
 	&[disabled] {
 		cursor: default;
+		border-color: var(--color-dark-s);
+		svg {
+			path {
+				fill: var(--color-dark-s);
+			}
+		}
 	}
 
 	&:not([disabled]):hover {
@@ -117,14 +123,6 @@
 		}
 	}
 
-	&_inactive-nav {
-		border-color: var(--color-dark-s);
-		svg {
-			path {
-				fill: var(--color-dark-s);
-			}
-		}
-	}
 	&_start:not([disabled]):active,
 	&_prev-nav:not([disabled]):active,
 	&_page:not([disabled]):active,
@@ -245,12 +243,13 @@
 		display: flex;
 		flex-wrap: wrap;
 		row-gap: 30px;
-		margin: 0 -20px 60px;
+		margin: 60px -20px;
 		@media (max-width: em($breakpoint992)) {
 			padding: 0 64px;
 		}
 		@media (max-width: em($breakpoint576)) {
 			padding: 0 15px;
+			justify-content: center;
 		}
 		&_small-indent {
 			@media (max-width: em($breakpoint992)) {
@@ -262,23 +261,15 @@
 		}
 	}
 
+	
 	&__item {
 		flex: 0 1 25%;
 		padding: 0 20px;
 		@media (max-width: em($breakpoint992)) {
 			flex-basis: 50%;
-			&:nth-child(7),
-			&:nth-child(8) {
-				display: none;
-			}
 		}
 		@media (max-width: em($breakpoint576)) {
-			flex-basis: 100%;
-			&:nth-child(4),
-			&:nth-child(5),
-			&:nth-child(6) {
-				display: none;
-			}
+			flex-basis: auto;
 		}
 	}
 
