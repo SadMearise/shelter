@@ -63,12 +63,27 @@ const createCardTemplate = (object, number) => {
 	return card;
 }
 
+const animation = (elementClass) => {
+	const animation = [
+		{ opacity: "0" },
+		{ opacity: "1" },
+	];
+
+	const animationTiming = {
+		duration: 300,
+		iterations: 1,
+	};
+
+	const items = document.querySelectorAll(elementClass);
+
+	items.forEach(item => item.animate(animation, animationTiming));
+}
+
 const init = () => {	
 	const mediaQuery992 = window.matchMedia(`(max-width: ${functions.toEm(breakpoint992)})`);
 	const mediaQuery576 = window.matchMedia(`(max-width: ${functions.toEm(breakpoint576)})`);
 
 	let countElements;
-
 	let maxPages;
 
 	if (mediaQuery576.matches) {
@@ -110,9 +125,11 @@ const init = () => {
 		const item = createCardTemplate(pets, elementsArray[countElements * (currentPage - 1) + i])
 		list.insertAdjacentHTML('beforeend', item)
 	}
-	
+
 	pagesCount = Math.ceil(elementsArray.length / countElements);
 }
+
+
 
 init();
 popup.initPopups(pets);
@@ -138,8 +155,8 @@ btns.forEach((btn) => {
 			} else if (target.classList.contains('nav-btn_end')) {
 				currentPage = pagesCount;
 			}
-
-			if (currentPage >= 1 && currentPage <= pagesCount) { // тут добавил = к обеим вариантам
+			
+			if (currentPage >= 1 && currentPage <= pagesCount) {
 				nextBtn.removeAttribute('disabled');
 				prevBtn.removeAttribute('disabled');
 				toEndBtn.removeAttribute('disabled');
@@ -152,7 +169,9 @@ btns.forEach((btn) => {
 				prevBtn.setAttribute('disabled', '');
 				toStartBtn.setAttribute('disabled', '');
 			}
+
 			init();
+			animation(".our-friends__item");
 			popup.initPopups(pets);
 			pageBtn.innerHTML = `<span>${currentPage}</span>`
 		}
