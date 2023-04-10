@@ -146,9 +146,11 @@
 		&:active {
 			border-bottom: 3px solid var(--color-primary);
 		}
-		&:hover:not(:first-child) {
-			.header-nav-menu__item-link {
-				color: var(--color-light-s);
+		@media (hover: hover) and (pointer: fine) {
+			&:hover:not(:first-child) {
+				.header-nav-menu__item-link {
+					color: var(--color-light-s);
+				}
 			}
 		}
 		@media (max-width: em($breakpoint768)) {
@@ -176,15 +178,17 @@
 		.header-nav-menu__item-link {
 			color: var(--color-dark-l);
 		}
-		.header-nav-menu__item:hover {
-			.header-nav-menu__item-link {
-				color: var(--color-dark-3xl);
+		@media (hover: hover) and (pointer: fine) {
+			.header-nav-menu__item:hover {
+				.header-nav-menu__item-link {
+					color: var(--color-dark-3xl);
+				}
 			}
-		}
-		.header-nav-menu__item:hover:nth-child(2) {
-			.header-nav-menu__item-link {
-				color: var(--color-dark-l);
-				cursor: default;
+			.header-nav-menu__item:hover:nth-child(2) {
+				.header-nav-menu__item-link {
+					color: var(--color-dark-l);
+					cursor: default;
+				}
 			}
 		}
 	}
