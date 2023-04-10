@@ -31,7 +31,9 @@ const createPopupTemplate = (object, number) => {
 		<div class="popup__body">
 			<div class="popup__wrapper">
 				<div class="popup__content">
-					<img src="${object[number].img}" alt="pet" class="popup__img">
+					<div class="popup__img-wrapper">
+						<img src="${object[number].img}" alt="pet" class="popup__img">
+					</div>
 					<div class="popup__pet-info pet-info">
 						<div class="pet-info__name h3-title h3-title_dark h3-title_big">${object[number].name}</div>
 						<div class="pet-info__type"><span>${object[number].type}</span> - <span>${object[number].breed}</span></div>

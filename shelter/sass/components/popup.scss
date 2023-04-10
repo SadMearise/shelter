@@ -9,8 +9,8 @@
 	top: 0;
 	left: 0;
 	opacity: 0;
-	z-index: 1000;
 	visibility: hidden;
+	z-index: 1000;
 	overflow-y: auto;
 	overflow-x: hidden;
 	transition: all .3s ease 0s;
@@ -81,6 +81,10 @@
 		height: auto;
 		object-fit: contain;
 		border-radius: 9px 0px 0px 9px;
+		@media (max-width: em($breakpoint992)) {
+			object-fit: cover;
+			height: 100%;
+		}
 		@media (max-width: em($breakpoint768 + 0.02)) {
 			max-width: 350px;
 		}
@@ -92,15 +96,14 @@
 	&__pet-info {
 		max-width: 400px;
 		padding: 51px 20px 50px 30px;
+		margin: 0 auto;
 		@media (max-width: em($breakpoint768 + 0.02)) {
 			padding: 10px 9px 37px 11px;
 			max-width: 281px;
 		}
-		@media (max-width: em($breakpoint768)) {
-			max-width: none;
-		}
 		@media (max-width: em($breakpoint576)) {
 			padding: 9px 9px 9px 11px;
+			max-width: none;
 		}
 	}
 }

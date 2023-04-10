@@ -6,8 +6,8 @@
   top: 0;
   left: 0;
   opacity: 0;
-  z-index: 1000;
   visibility: hidden;
+  z-index: 1000;
   overflow-y: auto;
   overflow-x: hidden;
   transition: all 0.3s ease 0s;
@@ -86,6 +86,13 @@
      object-fit: contain;
   border-radius: 9px 0px 0px 9px;
 }
+@media (max-width: 61.99875em) {
+  .popup__img {
+    -o-object-fit: cover;
+       object-fit: cover;
+    height: 100%;
+  }
+}
 @media (max-width: 48em) {
   .popup__img {
     max-width: 350px;
@@ -99,6 +106,7 @@
 .popup__pet-info {
   max-width: 400px;
   padding: 51px 20px 50px 30px;
+  margin: 0 auto;
 }
 @media (max-width: 48em) {
   .popup__pet-info {
@@ -106,14 +114,10 @@
     max-width: 281px;
   }
 }
-@media (max-width: 47.99875em) {
-  .popup__pet-info {
-    max-width: none;
-  }
-}
 @media (max-width: 35.99875em) {
   .popup__pet-info {
     padding: 9px 9px 9px 11px;
+    max-width: none;
   }
 }
 
