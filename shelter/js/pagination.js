@@ -153,6 +153,7 @@ btns.forEach((btn) => {
 				toStartBtn.setAttribute('disabled', '');
 			}
 			init();
+			popup.initPopups(pets);
 			pageBtn.innerHTML = `<span>${currentPage}</span>`
 		}
 	})
